@@ -74,51 +74,94 @@
 <!-- ════════════════════ HOME PAGE ════════════════════ -->
 <div class="page active" id="page-home">
 
-  <!-- HERO -->
-  <section class="hero" style="background: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
-    <div class="hero-bg-pattern" style="background: rgba(8, 30, 20, 0.85);"></div>
+  <!-- HERO CAROUSEL -->
+  <section class="hero hero-slider" id="homeHero">
+    <div class="hero-bg-pattern"></div>
     <div class="hero-glow"></div>
-    <div class="hero-inner">
-      <div>
-        <div class="hero-tag">Gangapur City's Trusted Healthcare</div>
-        <p class="hero-sub">Ancient Wisdom · Modern Medicine</p>
-        <h1>
-          Healing You With<br>
-          <span class="accent">Nature & Science</span>
-        </h1>
-        <p class="hero-desc">Akshat Ayurvedic & Multi-Specialty Hospital combines centuries of Ayurvedic tradition with cutting-edge modern medicine. Compassionate care for every patient, every day.</p>
-        <div class="hero-btns">
-          <a href="#" class="btn-hero-primary" onclick="showPage('contact')">Book Free Consultation</a>
-          <a href="#" class="btn-hero-outline" onclick="showPage('services')">Explore Services →</a>
-        </div>
-        <div class="hero-live">Always Open · 24×7 Emergency Available</div>
-        <div class="hero-stats">
-          <div class="h-stat"><span class="h-stat-n">20+</span><span class="h-stat-l">Beds</span></div>
-          <div class="h-stat"><span class="h-stat-n">25+</span><span class="h-stat-l">Yrs Expertise</span></div>
-          <div class="h-stat"><span class="h-stat-n">4+</span><span class="h-stat-l">Specialists</span></div>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="hero-card-head">
-          <div class="doctor-thumb"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=120&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;" alt="Doctor"></div>
+    <div class="max hero-slider-wrap">
+      <div class="hero-slide-stage" id="heroStage">
+        <article class="hero-slide active">
           <div>
-            <div class="hc-name">Vaidya J.P. Sharma</div>
-            <div class="hc-deg">BAMS · Panchkarma Specialist · 25 Yrs</div>
-            <div class="hc-stars">★★★★★ Lead Physician</div>
+            <div class="hero-tag">Gangapur City · Since 2020</div>
+            <p class="hero-sub">Ancient Wisdom · Modern Medicine</p>
+            <h1>Akshat Ayurvedic<br><span class="accent">Multi-Specialty Hospital</span></h1>
+            <p class="hero-desc">Ayurveda and modern clinical care under one roof for OPD, IPD, diagnostics, and emergency support.</p>
+            <div class="hero-btns">
+              <a href="#" class="btn-hero-primary" onclick="showPage('contact')">Book Appointment</a>
+              <a href="#" class="btn-hero-outline" onclick="showPage('services')">Explore Services</a>
+            </div>
           </div>
-        </div>
-        <div class="quick-book">
-          <div class="qb-title">Quick Book a Service</div>
-          <div class="qb-service-grid">
-            <div class="qb-chip sel">General OPD</div>
-            <div class="qb-chip">Panchkarma</div>
-            <div class="qb-chip">Physiotherapy</div>
-            <div class="qb-chip">Skin & Hair</div>
-            <div class="qb-chip">Lab Tests</div>
-            <div class="qb-chip">Emergency</div>
+          <div class="hero-mini-cards">
+            <div class="hero-mini-card"><span>20+</span><small>Bed Hospital</small></div>
+            <div class="hero-mini-card"><span>25+</span><small>Years Experience</small></div>
+            <div class="hero-mini-card"><span>24×7</span><small>Emergency</small></div>
           </div>
-          <button class="qb-call" onclick="showPage('contact')">📞 Call to Book Appointment</button>
-        </div>
+        </article>
+        <article class="hero-slide">
+          <div>
+            <div class="hero-tag">Panchkarma Centre</div>
+            <p class="hero-sub">Detox · Rejuvenation · Therapy</p>
+            <h1>Authentic Panchkarma<br><span class="accent">With Clinical Safety</span></h1>
+            <p class="hero-desc">Classical therapies including Vamana, Virechana, Basti, Nasya, Janu Basti and Netra care managed by experts.</p>
+            <div class="hero-btns">
+              <a href="#" class="btn-hero-primary" onclick="showPage('services')">View Panchkarma</a>
+              <a href="tel:8432127462" class="btn-hero-outline">Call Now</a>
+            </div>
+          </div>
+          <div class="hero-mini-cards">
+            <div class="hero-mini-card"><span>14+</span><small>Therapies</small></div>
+            <div class="hero-mini-card"><span>5000+</span><small>Patients</small></div>
+            <div class="hero-mini-card"><span>4.8★</span><small>Rated Care</small></div>
+          </div>
+        </article>
+        <article class="hero-slide">
+          <div>
+            <div class="hero-tag">Advanced Rehabilitation</div>
+            <p class="hero-sub">Physiotherapy · Paralysis Care</p>
+            <h1>Move Better Again<br><span class="accent">With Rehab Specialists</span></h1>
+            <p class="hero-desc">Structured recovery programs for back pain, paralysis rehab, post-stroke care, and joint mobility.</p>
+            <div class="hero-btns">
+              <a href="#" class="btn-hero-primary" onclick="showPage('doctors')">Meet Doctors</a>
+              <a href="#" class="btn-hero-outline" onclick="showPage('contact')">Book Session</a>
+            </div>
+          </div>
+          <div class="hero-mini-cards">
+            <div class="hero-mini-card"><span>2</span><small>Daily Slots</small></div>
+            <div class="hero-mini-card"><span>7:30AM</span><small>Morning Start</small></div>
+            <div class="hero-mini-card"><span>9:00PM</span><small>Evening Close</small></div>
+          </div>
+        </article>
+        <article class="hero-slide">
+          <div>
+            <div class="hero-tag">Integrated Diagnostics</div>
+            <p class="hero-sub">In-House Lab · Quick Reports</p>
+            <h1>Faster Diagnosis<br><span class="accent">Better Treatment Planning</span></h1>
+            <p class="hero-desc">CBC, sugar, thyroid, hormone, vitamin and infection panels with same-day support for urgent cases.</p>
+            <div class="hero-btns">
+              <a href="#" class="btn-hero-primary" onclick="showPage('lab')">See Lab Tests</a>
+              <a href="#" class="btn-hero-outline" onclick="showPage('contact')">Request Callback</a>
+            </div>
+          </div>
+          <div class="hero-mini-cards">
+            <div class="hero-mini-card"><span>12+</span><small>Core Panels</small></div>
+            <div class="hero-mini-card"><span>Same Day</span><small>Reports</small></div>
+            <div class="hero-mini-card"><span>OPD/IPD</span><small>Integrated</small></div>
+          </div>
+        </article>
+        <button class="hero-nav hero-nav-left" type="button" onclick="heroChangeSlide(-1)" aria-label="Previous slide">‹</button>
+        <button class="hero-nav hero-nav-right" type="button" onclick="heroChangeSlide(1)" aria-label="Next slide">›</button>
+      </div>
+      <div class="hero-dots">
+        <button class="hero-dot active" type="button" onclick="heroGoToSlide(0)" aria-label="Hero slide 1"></button>
+        <button class="hero-dot" type="button" onclick="heroGoToSlide(1)" aria-label="Hero slide 2"></button>
+        <button class="hero-dot" type="button" onclick="heroGoToSlide(2)" aria-label="Hero slide 3"></button>
+        <button class="hero-dot" type="button" onclick="heroGoToSlide(3)" aria-label="Hero slide 4"></button>
+      </div>
+      <div class="hero-thumbs">
+        <button class="hero-thumb active" type="button" onclick="heroGoToSlide(0)">Hospital Overview</button>
+        <button class="hero-thumb" type="button" onclick="heroGoToSlide(1)">Panchkarma</button>
+        <button class="hero-thumb" type="button" onclick="heroGoToSlide(2)">Rehabilitation</button>
+        <button class="hero-thumb" type="button" onclick="heroGoToSlide(3)">Diagnostics</button>
       </div>
     </div>
   </section>
@@ -152,293 +195,243 @@
     </div>
   </div>
 
-  <!-- WHY US -->
-  <section class="services-bg">
+  <!-- QUICK INFO STRIP -->
+  <section class="quick-strip">
     <div class="max">
-      <div class="sec-head">
-        <div class="sec-label">Why Choose Us</div>
-        <div class="sec-title">Gangapur Mein Koi Fark Karta Hai?<br><span class="i">Haan — Akshat Hospital.</span></div>
-        <div class="sec-desc">We go beyond routine treatment to offer personalised, compassionate care rooted in both Ayurvedic wisdom and modern diagnostics.</div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px">
-        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
-          <div style="font-size:28px;margin-bottom:14px">🌿</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">Ayurveda First Philosophy</div>
-          <div style="font-size:.83rem;color:var(--light);line-height:1.65">Root-cause treatment using classical Ayurvedic methods before resorting to invasive procedures.</div>
-        </div>
-        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
-          <div style="font-size:28px;margin-bottom:14px">🏥</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">Modern Infrastructure</div>
-          <div style="font-size:.83rem;color:var(--light);line-height:1.65">20+ bed hospital with full diagnostic lab, pharmacy, and rehabilitation centre under one roof.</div>
-        </div>
-        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
-          <div style="font-size:28px;margin-bottom:14px">⏰</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">Always Available</div>
-          <div style="font-size:.83rem;color:var(--light);line-height:1.65">24×7 emergency services, 365 days a year. We are always here when you need us most.</div>
-        </div>
-        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
-          <div style="font-size:28px;margin-bottom:14px">💰</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">Transparent Pricing</div>
-          <div style="font-size:.83rem;color:var(--light);line-height:1.65">Affordable treatment rates with no hidden charges. Quality care accessible to all.</div>
-        </div>
-        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
-          <div style="font-size:28px;margin-bottom:14px">👨‍⚕️</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">Expert Specialists</div>
-          <div style="font-size:.83rem;color:var(--light);line-height:1.65">Qualified doctors with up to 25 years of experience across multiple specialities.</div>
-        </div>
-        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
-          <div style="font-size:28px;margin-bottom:14px">🧪</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">In-house Lab</div>
-          <div style="font-size:.83rem;color:var(--light);line-height:1.65">CBC, Sugar, Thyroid, Hormones, Vitamin B12, D3 and more — results within hours.</div>
-        </div>
+      <div class="quick-grid">
+        <div class="quick-item"><span>🏥</span><div><strong>20+ Bed Facility</strong><small>Complete IPD and emergency support</small></div></div>
+        <div class="quick-item"><span>🧪</span><div><strong>In-house Diagnostics</strong><small>Rapid lab tests and same-day reports</small></div></div>
+        <div class="quick-item"><span>👨‍⚕️</span><div><strong>Expert Specialists</strong><small>Ayurveda and modern medicine team</small></div></div>
+        <div class="quick-item"><span>🚨</span><div><strong>24×7 Emergency</strong><small>Always available for urgent care</small></div></div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED SERVICES -->
+  <!-- WHY CHOOSE US -->
+  <section class="services-bg">
+    <div class="max">
+      <div class="sec-head center">
+        <div class="sec-label">Why Choose Akshat</div>
+        <div class="sec-title">Gangapur Mein Bharosemand <span class="i">Integrated Care</span></div>
+        <div class="sec-desc">Transparent treatment planning, specialist supervision, and round-the-clock care with patient-first support.</div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card"><span>🌿</span><h3>Ayurveda + Modern</h3><p>Evidence-based integration for better outcomes.</p></div>
+        <div class="why-card"><span>🏥</span><h3>Complete Facility</h3><p>OPD, IPD, diagnostics, rehab, pharmacy in one place.</p></div>
+        <div class="why-card"><span>⏱️</span><h3>Always Available</h3><p>Emergency and urgent treatment available 24×7.</p></div>
+        <div class="why-card"><span>💰</span><h3>Transparent Pricing</h3><p>Affordable care with clear billing and no hidden cost.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
   <section style="background:var(--cream2)">
     <div class="max">
       <div class="sec-head center">
-        <div class="sec-label">14 Specialised Services</div>
-        <div class="sec-title">Complete Care <span class="i">Under One Roof</span></div>
-        <div class="sec-desc">From Ayurvedic therapies to modern diagnostics — every speciality you need in one trusted hospital.</div>
+        <div class="sec-label">IPD + OPD Services</div>
+        <div class="sec-title">Complete Treatment <span class="i">Under One Roof</span></div>
+        <div class="sec-desc">Integrated healthcare covering preventive care, therapy, diagnostics, and specialist treatment pathways.</div>
       </div>
       <div class="serv-grid">
-        <div class="serv-card"><div class="s-icon">🩺</div><div class="s-name">General Medicine</div><div class="s-desc">Dengue, malaria, typhoid, diabetes, B.P., heart conditions & seasonal illness.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
-        <div class="serv-card"><div class="s-icon">🧠</div><div class="s-name">Paralysis & Neurology</div><div class="s-desc">Stroke, polio, sciatica, limb numbness, migraine & nerve disorders.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
-        <div class="serv-card"><div class="s-icon">🌿</div><div class="s-name">Panchkarma Therapy</div><div class="s-desc">Classical Ayurvedic detox — Vamana, Virechana, Basti, Nasya & more.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
-        <div class="serv-card"><div class="s-icon">🦠</div><div class="s-name">Skin & Dermatology</div><div class="s-desc">Eczema, acne, psoriasis, vitiligo, hair fall & all skin conditions.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
-        <div class="serv-card"><div class="s-icon">🤸</div><div class="s-name">Physiotherapy</div><div class="s-desc">Back pain, joint pain, arthritis, paralysis rehab & sports injuries.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
-        <div class="serv-card"><div class="s-icon">👁️</div><div class="s-name">Netra Darshan Therapy</div><div class="s-desc">Traditional Ayurvedic eye care for vision & eye health.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🩺</div><div class="s-name">General Medicine</div><div class="s-desc">Fever, diabetes, BP, infection, and routine physician consultation.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🌿</div><div class="s-name">Panchkarma</div><div class="s-desc">Classical Ayurvedic detox and restorative protocols.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🤸</div><div class="s-name">Physiotherapy</div><div class="s-desc">Back pain, paralysis rehab, mobility and post-injury care.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🦠</div><div class="s-name">Skin & Hair</div><div class="s-desc">Psoriasis, eczema, acne, fungal infection, and hair fall care.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🫀</div><div class="s-name">Kidney & Urology</div><div class="s-desc">Kidney concerns, urinary disorders, and follow-up care.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🧠</div><div class="s-name">Neurology Care</div><div class="s-desc">Stroke, sciatica, nerve pain and neuro-rehab treatment plans.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">👁️</div><div class="s-name">Netra Darshan</div><div class="s-desc">Traditional eye wellness and strengthening therapies.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🧪</div><div class="s-name">Lab & Diagnostics</div><div class="s-desc">CBC, thyroid, sugar, hormone, vitamin and infection tests.</div><a class="s-more" href="#" onclick="showPage('lab')">Learn more →</a></div>
       </div>
       <div style="text-align:center;margin-top:36px">
-        <a href="#" class="btn-fill" onclick="showPage('services')" style="display:inline-flex;padding:14px 36px;font-size:.95rem">View All 14 Services →</a>
+        <a href="#" class="btn-fill" onclick="showPage('services')" style="display:inline-flex;padding:14px 36px;font-size:.95rem">View All Services</a>
       </div>
     </div>
   </section>
 
-  <!-- LEAD DOCTOR -->
-  <section class="doctors-sec">
-    <div class="max">
-      <div class="dr-layout">
-        <div class="dr-img-wrap">
-          <div class="dr-photo"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;" alt="Lead Doctor"></div>
-          <div class="dr-badge-exp"><span class="n">25</span><span class="l">Years of Experience</span></div>
-          <div class="dr-badge-rating"><div class="r">★ 4.9</div><div class="rl">Patient Rating</div></div>
-        </div>
-        <div class="dr-info">
-          <div class="title">Lead Physician & Founder</div>
-          <h2>Vaidya J.P. Sharma</h2>
-          <div class="deg">BAMS · Panchkarma Specialist · Naturopath</div>
-          <p>With 25 years of dedicated practice in Ayurvedic medicine, Vaidya J.P. Sharma has transformed thousands of lives through classical Panchkarma treatments and holistic naturopathy. His philosophy centres on treating the root cause — not just the symptom.</p>
-          <div class="dr-chips">
-            <span class="chip">BAMS Graduate</span>
-            <span class="chip">Panchkarma Expert</span>
-            <span class="chip">Naturopath</span>
-            <span class="chip">Digestive Specialist</span>
-            <span class="chip">Piles & Liver Expert</span>
-          </div>
-          <div class="dr-metrics">
-            <div class="dm-item"><div class="n">25+</div><div class="l">Years Practice</div></div>
-            <div class="dm-item"><div class="n">5000+</div><div class="l">Patients Treated</div></div>
-            <div class="dm-item"><div class="n">4.9★</div><div class="l">Avg. Rating</div></div>
-          </div>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="tel:8432127462" class="btn-fill">📞 Book with Him</a>
-            <a href="#" class="btn-ghost" onclick="showPage('doctors')">Meet All Doctors</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PATIENT REVIEWS CAROUSEL -->
-  <section class="reviews-sec">
-    <div class="max">
-      <div class="reviews-layout">
-        <div>
-          <div class="rev-big-num">128+</div>
-          <div class="sec-label">Patient Stories</div>
-          <div class="sec-title">Patients Can't Be<br>Wrong — <span class="i">See Their Stories</span></div>
-          <div class="rev-agg">
-            <div class="rev-agg-n">4.9</div>
-            <div class="rev-agg-stars">★★★★★</div>
-            <div class="rev-agg-l">Based on 128+ patient reviews</div>
-            <div class="rev-breakdown">
-              <div class="rb-row"><span class="rb-label">5</span><div class="rb-bar"><div class="rb-fill" style="width:88%"></div></div><span class="rb-count">112</span></div>
-              <div class="rb-row"><span class="rb-label">4</span><div class="rb-bar"><div class="rb-fill" style="width:9%"></div></div><span class="rb-count">12</span></div>
-              <div class="rb-row"><span class="rb-label">3</span><div class="rb-bar"><div class="rb-fill" style="width:3%"></div></div><span class="rb-count">4</span></div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="carousel-wrap">
-            <div class="carousel-track" id="revTrack">
-              <div class="rev-card">
-                <div class="rev-top">
-                  <div><div class="rev-name">Ramesh Sharma</div><div class="rev-date">March 2024</div></div>
-                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">Panchkarma</div></div>
-                </div>
-                <div class="rev-text">"I suffered from chronic digestive issues for 8 years. After just 21 days of Panchkarma treatment with Vaidya J.P. Sharma, my condition improved dramatically. Truly life-changing care."</div>
-              </div>
-              <div class="rev-card">
-                <div class="rev-top">
-                  <div><div class="rev-name">Sunita Devi</div><div class="rev-date">February 2024</div></div>
-                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">Physiotherapy</div></div>
-                </div>
-                <div class="rev-text">"Dr. Gaurav helped me recover from partial paralysis after stroke. His dedication and expert physiotherapy made me walk again. The entire staff is so caring and professional."</div>
-              </div>
-              <div class="rev-card">
-                <div class="rev-top">
-                  <div><div class="rev-name">Mahesh Gupta</div><div class="rev-date">January 2024</div></div>
-                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">General OPD</div></div>
-                </div>
-                <div class="rev-text">"Dr. R.M. Meena diagnosed my typhoid quickly and treated me so well. Very affordable rates and the lab results came same day. Best hospital in Gangapur City without doubt."</div>
-              </div>
-              <div class="rev-card">
-                <div class="rev-top">
-                  <div><div class="rev-name">Kavita Meena</div><div class="rev-date">December 2023</div></div>
-                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">Skin Care</div></div>
-                </div>
-                <div class="rev-text">"Dr. K.K. Vaishnav treated my psoriasis that other doctors couldn't resolve. After 2 months of treatment, my skin is clear. Very knowledgeable and kind doctor."</div>
-              </div>
-              <div class="rev-card">
-                <div class="rev-top">
-                  <div><div class="rev-name">Dinesh Kumar</div><div class="rev-date">November 2023</div></div>
-                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">Emergency</div></div>
-                </div>
-                <div class="rev-text">"Had a medical emergency at 2 AM. Akshat Hospital was fully equipped and the staff responded immediately. The 24×7 service is genuine — it literally saved my life."</div>
-              </div>
-              <div class="rev-card">
-                <div class="rev-top">
-                  <div><div class="rev-name">Priya Singh</div><div class="rev-date">October 2023</div></div>
-                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">Janu Basti</div></div>
-                </div>
-                <div class="rev-text">"My knee pain of 5 years completely gone after Janu Basti therapy! Vaidya ji is a master of Ayurvedic treatments. The hospital is clean, well managed, and affordable."</div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-controls">
-            <button class="car-btn" onclick="moveCarousel(-1)">←</button>
-            <button class="car-btn" onclick="moveCarousel(1)">→</button>
-            <div class="car-dots" id="carDots"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRANSFORMATIONS -->
-  <section class="transform-sec">
+  <!-- DOCTORS -->
+  <section class="home-doctors">
     <div class="max">
       <div class="sec-head center">
-        <div class="sec-label">Real Results</div>
-        <div class="sec-title">Patient <span class="i">Transformations</span></div>
-        <div class="sec-desc">Real patients, real results. See how our treatments have changed lives across different specialities.</div>
+        <div class="sec-label">Our Specialists</div>
+        <div class="sec-title">Meet the <span class="i">Doctor Team</span></div>
+        <div class="sec-desc">Experienced physicians and therapists delivering personalized, compassionate treatment.</div>
       </div>
-      <div class="tf-grid">
-        <div class="tf-card"><div class="tf-img" style="background:linear-gradient(135deg,#2d8653,#1a5c3a)"><img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&q=80" alt="Panchkarma treatment" style="position:absolute;width:100%;height:100%;object-fit:cover;opacity:0.4;"><div class="tf-before-after"><span class="tf-ba-tag">Before</span><span class="tf-ba-tag">After</span></div></div><div class="tf-info"><div class="tf-type">Panchkarma — Digestive Disorder</div><div class="tf-period">21-Day Treatment</div></div></div>
-        <div class="tf-card"><div class="tf-img" style="background:linear-gradient(135deg,#1a5c3a,#4caf80)"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80" alt="Paralysis rehabilitation" style="position:absolute;width:100%;height:100%;object-fit:cover;opacity:0.4;"><div class="tf-before-after"><span class="tf-ba-tag">Before</span><span class="tf-ba-tag">After</span></div></div><div class="tf-info"><div class="tf-type">Physiotherapy — Paralysis Rehab</div><div class="tf-period">45-Day Program</div></div></div>
-        <div class="tf-card"><div class="tf-img" style="background:linear-gradient(135deg,#4caf80,#2d8653)"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=600&q=80" alt="Psoriasis skin therapy" style="position:absolute;width:100%;height:100%;object-fit:cover;opacity:0.4;"><div class="tf-before-after"><span class="tf-ba-tag">Before</span><span class="tf-ba-tag">After</span></div></div><div class="tf-info"><div class="tf-type">Skin Therapy — Psoriasis</div><div class="tf-period">60-Day Treatment</div></div></div>
-        <div class="tf-card"><div class="tf-img" style="background:linear-gradient(135deg,#c8993a,#1a5c3a)"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Janu Basti knee pain" style="position:absolute;width:100%;height:100%;object-fit:cover;opacity:0.4;"><div class="tf-before-after"><span class="tf-ba-tag">Before</span><span class="tf-ba-tag">After</span></div></div><div class="tf-info"><div class="tf-type">Janu Basti — Knee Pain</div><div class="tf-period">14-Day Course</div></div></div>
+      <div class="home-doctor-grid">
+        <article class="home-doctor-card">
+          <div class="home-doctor-top">
+            <div class="home-doctor-avatar">JP</div>
+            <div>
+              <h3>Vaidya J.P. Sharma</h3>
+              <p>BAMS · Panchkarma Specialist</p>
+            </div>
+            <span class="home-doctor-timing">10AM-2PM · 4PM-9PM</span>
+          </div>
+          <div class="home-doctor-body">
+            <div class="home-doctor-tags"><span>Panchkarma</span><span>Digestive Care</span><span>Naturopathy</span></div>
+            <a href="tel:8432127462" class="btn-fill home-doctor-btn">Book Appointment</a>
+          </div>
+        </article>
+        <article class="home-doctor-card">
+          <div class="home-doctor-top">
+            <div class="home-doctor-avatar">KK</div>
+            <div>
+              <h3>Dr. K.K. Vaishnav</h3>
+              <p>MD · Skin Specialist</p>
+            </div>
+            <span class="home-doctor-timing">Mon-Sat · 10AM-2PM</span>
+          </div>
+          <div class="home-doctor-body">
+            <div class="home-doctor-tags"><span>Dermatology</span><span>Psoriasis</span><span>Hair Care</span></div>
+            <a href="tel:8432127462" class="btn-fill home-doctor-btn">Book Appointment</a>
+          </div>
+        </article>
+        <article class="home-doctor-card">
+          <div class="home-doctor-top">
+            <div class="home-doctor-avatar">RM</div>
+            <div>
+              <h3>Dr. R.M. Meena</h3>
+              <p>MBBS MD · Physician</p>
+            </div>
+            <span class="home-doctor-timing">Daily · OPD Hours</span>
+          </div>
+          <div class="home-doctor-body">
+            <div class="home-doctor-tags"><span>General OPD</span><span>Infectious Care</span><span>Emergency</span></div>
+            <a href="tel:8432127462" class="btn-fill home-doctor-btn">Book Appointment</a>
+          </div>
+        </article>
+        <article class="home-doctor-card">
+          <div class="home-doctor-top">
+            <div class="home-doctor-avatar">GS</div>
+            <div>
+              <h3>Dr. Gaurav Sharma</h3>
+              <p>Physiotherapist · Rehab Expert</p>
+            </div>
+            <span class="home-doctor-timing">7:30AM-2PM · 5PM-9PM</span>
+          </div>
+          <div class="home-doctor-body">
+            <div class="home-doctor-tags"><span>Paralysis Rehab</span><span>Pain Relief</span><span>Mobility</span></div>
+            <a href="tel:8432127462" class="btn-fill home-doctor-btn">Book Appointment</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- FREE CONSULTATION FORM -->
-  <section class="consult-sec">
+  <!-- AYURVEDA -->
+  <section class="home-ayurveda">
+    <div class="max ayurveda-layout">
+      <div>
+        <div class="sec-label">Ayurveda Wing</div>
+        <div class="sec-title" style="color:#fff">Traditional Healing<br><span class="i" style="color:var(--gold2)">With Medical Supervision</span></div>
+        <p class="sec-desc" style="color:rgba(255,255,255,.68)">Dedicated Panchkarma rooms, customized herbal plans, and integrated follow-up with modern clinical evaluation.</p>
+        <div class="ayurveda-list">
+          <div class="ayurveda-item"><span>✓</span>Vamana, Virechana, Basti, Nasya and Raktamokshan</div>
+          <div class="ayurveda-item"><span>✓</span>Janu Basti and spine-focused pain protocols</div>
+          <div class="ayurveda-item"><span>✓</span>Netra Darshan therapy and eye wellness support</div>
+          <div class="ayurveda-item"><span>✓</span>Diet and lifestyle guidance for long-term healing</div>
+        </div>
+      </div>
+      <div class="ayurveda-rating-card">
+        <div class="rating-main">★ 4.8</div>
+        <p>Google Rating</p>
+        <div class="rating-mini-grid">
+          <div><strong>20+</strong><small>Beds</small></div>
+          <div><strong>25+</strong><small>Years Lead Exp.</small></div>
+          <div><strong>24×7</strong><small>Emergency</small></div>
+          <div><strong>4+</strong><small>Specialists</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="home-testimonials">
     <div class="max">
-      <div class="consult-layout">
+      <div class="sec-head center">
+        <div class="sec-label">Patient Reviews</div>
+        <div class="sec-title" style="color:#fff">Patients Ki <span class="i" style="color:var(--gold2)">Kahaniyan</span></div>
+      </div>
+      <div class="testi-window">
+        <div class="testi-track" id="testiTrack">
+          <article class="testi-card"><div class="testi-stars">★★★★★</div><p>"Vaidya ji ke treatment se meri digestive problem mein bahut relief mila. Staff bhi bahut supportive tha."</p><h4>Ramesh Sharma</h4><small>Gangapur City</small></article>
+          <article class="testi-card"><div class="testi-stars">★★★★★</div><p>"Physiotherapy sessions se paralysis recovery expected se better hui. Team committed aur disciplined hai."</p><h4>Sunita Meena</h4><small>Sawai Madhopur</small></article>
+          <article class="testi-card"><div class="testi-stars">★★★★★</div><p>"Skin treatment plan practical tha aur clear guidance mili. 2 months mein visible improvement mila."</p><h4>Mahesh Gupta</h4><small>Karauli</small></article>
+          <article class="testi-card"><div class="testi-stars">★★★★★</div><p>"Emergency mein raat ko immediate response mila. 24x7 service genuinely available hai."</p><h4>Dinesh Kumar</h4><small>Gangapur City</small></article>
+          <article class="testi-card"><div class="testi-stars">★★★★★</div><p>"Doctor consultation detailed tha. Affordable pricing aur fast lab reports kaafi helpful rahe."</p><h4>Priya Singh</h4><small>Hindaun</small></article>
+        </div>
+      </div>
+      <div class="testi-controls">
+        <button class="testi-btn" type="button" onclick="moveTestimonials(-1)" aria-label="Previous testimonials">‹</button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-btn" type="button" onclick="moveTestimonials(1)" aria-label="Next testimonials">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="home-gallery">
+    <div class="max">
+      <div class="sec-head center">
+        <div class="sec-label">Hospital Gallery</div>
+        <div class="sec-title">Hamari <span class="i">Jhalakiyan</span></div>
+        <div class="sec-desc">Hospital spaces, patient moments and informative videos in one visual gallery.</div>
+      </div>
+      <div class="gallery-tabs">
+        <button class="gallery-tab active" type="button" onclick="switchGalleryTab(0)">Hospital</button>
+        <button class="gallery-tab" type="button" onclick="switchGalleryTab(1)">Patients</button>
+        <button class="gallery-tab" type="button" onclick="switchGalleryTab(2)">Videos</button>
+      </div>
+      <div class="gallery-collage" id="homeGalleryGrid"></div>
+      <div class="gallery-row2" id="homeGalleryRow2"></div>
+      <a class="gallery-more" href="#" onclick="showPage('contact')">See All Photos & Videos</a>
+    </div>
+  </section>
+
+  <!-- EMERGENCY -->
+  <section class="home-emergency">
+    <div class="max">
+      <div class="home-emergency-card">
         <div>
-          <div class="consult-label">Limited Slots Available</div>
-          <div class="consult-title">Get Your <span class="i">Free</span><br>Consultation Today</div>
-          <ul class="consult-points">
-            <li>Expert evaluation by qualified specialists</li>
-            <li>Personalised Ayurvedic & medical treatment plan</li>
-            <li>Affordable, transparent pricing — no hidden costs</li>
-            <li>24×7 emergency services, always available</li>
-            <li>In-house lab for same-day diagnostic results</li>
-            <li>Both OPD & IPD services under one roof</li>
-          </ul>
+          <h3>24×7 Aapatkalin Seva Upalabdh</h3>
+          <p>Kisi bhi medical emergency ke liye turant call karein.</p>
         </div>
-        <div class="form-card">
-          <div class="form-title">Book Your Visit</div>
-          <form action="https://formspree.io/f/xgveqyrg" method="POST">
-          <div class="form-row"><label for="h-name">Full Name</label><input id="h-name" type="text" name="name" placeholder="Your full name" required></div>
+        <div class="home-emergency-nums">
+          <a href="tel:8432127462">8432127462</a>
+          <a href="tel:07463469884">07463-469884</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT + APPOINTMENT -->
+  <section class="home-contact">
+    <div class="max home-contact-grid">
+      <div class="home-contact-info">
+        <div class="sec-label" style="color:var(--gold2)">Contact & Visit</div>
+        <h2>Appointment <span class="i" style="color:var(--gold2)">Book Karein</span></h2>
+        <div class="home-contact-item"><strong>Address</strong><p>Opp. Ashirwad Marriage Home, College Road, Gangapur City, Rajasthan - 322201</p></div>
+        <div class="home-contact-item"><strong>Phone</strong><p><a href="tel:8432127462">8432127462</a> · <a href="tel:07463469884">07463-469884</a></p></div>
+        <div class="home-contact-item"><strong>OPD Timings</strong><p>Morning 10AM-2PM · Evening 4PM-9PM</p></div>
+        <a class="map-link" href="https://maps.google.com?q=Ashirwad+Marriage+Home+Gangapur+City" target="_blank">View on Google Maps</a>
+      </div>
+      <div class="form-card home-form-card">
+        <div class="form-title">Book an Appointment</div>
+        <form action="https://formspree.io/f/xgveqyrg" method="POST">
           <div class="form-grid-2">
-            <div class="form-row"><label for="h-phone">Phone</label><input id="h-phone" type="tel" name="phone" placeholder="Your number" required></div>
-            <div class="form-row"><label for="h-age">Age</label><input id="h-age" type="number" name="age" placeholder="Age" required></div>
+            <div class="form-row"><label for="home-name">Full Name</label><input id="home-name" type="text" name="name" placeholder="Your full name" required></div>
+            <div class="form-row"><label for="home-phone">Phone</label><input id="home-phone" type="tel" name="phone" placeholder="Phone number" required></div>
           </div>
-          <div class="form-row"><label for="h-service">Service Needed</label><select id="h-service" name="service">
-              <option>General OPD Consultation</option>
-              <option>Panchkarma Therapy</option>
-              <option>Physiotherapy</option>
-              <option>Skin & Dermatology</option>
-              <option>Lab Tests</option>
-              <option>Paralysis Treatment</option>
-              <option>Netra Darshan Therapy</option>
-              <option>Janu Basti Therapy</option>
-              <option>Emergency</option>
-            </select>
+          <div class="form-grid-2">
+            <div class="form-row"><label for="home-date">Preferred Date</label><input id="home-date" type="date" name="date" required></div>
+            <div class="form-row"><label for="home-slot">Time Slot</label><select id="home-slot" name="slot"><option>Morning (10AM-2PM)</option><option>Evening (4PM-9PM)</option></select></div>
           </div>
-          <div class="form-row"><label for="h-msg">Message (Optional)</label><textarea id="h-msg" name="message" placeholder="Describe your concern..."></textarea></div>
-          <button type="submit" class="submit-btn">📅 Book My Appointment</button>
-          </form>
-          <div class="form-note">Or call directly: <strong>8432127462</strong> · <strong>07463-469884</strong></div>
-        </div>
+          <div class="form-row"><label for="home-service">Service</label><select id="home-service" name="service"><option>General OPD Consultation</option><option>Panchkarma Therapy</option><option>Physiotherapy</option><option>Skin & Dermatology</option><option>Lab Tests</option><option>Emergency</option></select></div>
+          <div class="form-row"><label for="home-msg">Complaint</label><textarea id="home-msg" name="message" placeholder="Describe your concern..."></textarea></div>
+          <button type="submit" class="submit-btn">Confirm Appointment</button>
+        </form>
       </div>
     </div>
   </section>
-
-  <!-- BLOG PREVIEW -->
-  <section class="blog-sec">
-    <div class="max">
-      <div class="sec-head">
-        <div class="sec-label">Health Education</div>
-        <div class="sec-title">Advice From <span class="i">Our Doctors</span></div>
-        <div class="sec-desc">Evidence-backed health tips and Ayurvedic wisdom from our specialist team to help you live better.</div>
-      </div>
-      <div class="blog-grid">
-        <div class="blog-card">
-          <div class="blog-img" style="background:linear-gradient(135deg,var(--g2),var(--g1))">🌿<span class="blog-cat">Ayurveda</span></div>
-          <div class="blog-body">
-            <div class="blog-meta"><span>Vaidya J.P. Sharma</span><span>5 min read</span></div>
-            <div class="blog-h">5 Daily Habits for Healthy Digestion According to Ayurveda</div>
-            <div class="blog-excerpt">Ancient Ayurvedic wisdom offers timeless advice for digestive health. These simple daily practices can transform your gut health naturally...</div>
-            <a class="blog-read" href="#" onclick="showBlogDetail('ayurveda-digestion')">Read Article →</a>
-          </div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-img" style="background:linear-gradient(135deg,#4caf80,var(--g1))">🤸<span class="blog-cat">Physiotherapy</span></div>
-          <div class="blog-body">
-            <div class="blog-meta"><span>Dr. Gaurav Sharma</span><span>4 min read</span></div>
-            <div class="blog-h">Don't Ignore Back Pain: When to See a Physiotherapist</div>
-            <div class="blog-excerpt">Back pain affects 80% of adults at some point. Knowing when to seek physiotherapy can prevent chronic disability and speed recovery...</div>
-            <a class="blog-read" href="#" onclick="showBlogDetail('back-pain')">Read Article →</a>
-          </div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-img" style="background:linear-gradient(135deg,var(--gold),var(--g1))">☀️<span class="blog-cat">Skin Health</span></div>
-          <div class="blog-body">
-            <div class="blog-meta"><span>Dr. K.K. Vaishnav</span><span>6 min read</span></div>
-            <div class="blog-h">Understanding Psoriasis: Causes, Triggers, and Effective Treatments</div>
-            <div class="blog-excerpt">Psoriasis is often misunderstood. Modern dermatology combined with Ayurvedic approaches can provide significant relief for sufferers...</div>
-            <a class="blog-read" href="#" onclick="showBlogDetail('psoriasis')">Read Article →</a>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:36px">
-        <a href="#" class="btn-fill" onclick="showPage('blog')" style="display:inline-flex;padding:14px 36px;font-size:.95rem">View All Articles →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- EMERGENCY STRIP -->
-  <div class="emergency">
-    <p>🚨 Medical Emergency? We're Always Available — 24 × 7</p>
-    <a href="tel:8432127462">Call: 8432127462</a>
-    <a href="tel:07463469884">07463-469884</a>
-  </div>
 
 </div><!-- end home page -->
 
@@ -753,41 +746,43 @@
           <a href="tel:8432127462" class="footer-phone">📞 8432127462</a>
           <a href="tel:07463469884" class="footer-phone">📞 07463-469884</a>
         </div>
+        <div class="footer-socials">
+          <a class="footer-social" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+        </div>
       </div>
       <div class="footer-col">
-        <h4>Our Services</h4>
+        <h4>Departments</h4>
         <ul>
+          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('services')">Panchkarma</a></li>
+          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('services')">Dermatology</a></li>
           <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('services')">General Medicine</a></li>
-          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('services')">Panchkarma Therapy</a></li>
           <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('services')">Physiotherapy</a></li>
-          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('services')">Skin & Dermatology</a></li>
-          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('services')">Paralysis Treatment</a></li>
-          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('lab')">Lab & Diagnostics</a></li>
+          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('services')">Gynaecology</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
+        <h4>Our Doctors</h4>
         <ul>
-          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('home')">Home</a></li>
-          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('doctors')">Our Doctors</a></li>
-          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('blog')">Health Blog</a></li>
-          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('about')">About Us</a></li>
-          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('contact')">Contact & Map</a></li>
+          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('doctors')">Vaidya J.P. Sharma</a></li>
+          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('doctors')">Dr. K.K. Vaishnav</a></li>
+          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('doctors')">Dr. R.M. Meena</a></li>
+          <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('doctors')">Dr. Gaurav Sharma</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Visit Us</h4>
+        <h4>Helpline</h4>
         <ul>
-          <li><a href="#">Opp. Ashirwad Marriage Home</a></li>
-          <li><a href="#">College Road</a></li>
-          <li><a href="#">Gangapur City, Raj. 322201</a></li>
+          <li><a href="tel:8432127462">8432127462</a></li>
+          <li><a href="tel:07463469884">07463-469884</a></li>
+          <li><a href="#">College Road, Gangapur City</a></li>
+          <li><a href="#">Emergency: 24×7</a></li>
         </ul>
         <div class="footer-badge" style="margin-top:16px">Always Open · 24×7</div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Akshat Ayurvedic & Multi-Specialty Hospital, Gangapur City. All rights reserved.</p>
-      <p>Designed with care for our patients.</p>
+      <p>© 2026 Akshat Ayurvedic & Multi-Specialty Hospital, Gangapur City. All rights reserved.</p>
+      <p>Ayush Approved · Rehab Centre · Nursing Care</p>
     </div>
   </div>
 </footer>
