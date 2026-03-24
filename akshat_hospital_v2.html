@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akshat Ayurvedic & Multi-Specialty Hospital | Gangapur City</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --g1: #1a5c3a;
+  --g2: #2d8653;
+  --g3: #4caf80;
+  --g4: #a8d5bc;
+  --gold: #c8993a;
+  --gold2: #e8bc6a;
+  --cream: #fdf8f0;
+  --cream2: #f5ede0;
+  --cream3: #ede4d3;
+  --white: #ffffff;
+  --dark: #101a14;
+  --text: #1e2a22;
+  --mid: #4a5e52;
+  --light: #7a9080;
+  --border: #dde8e2;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+
+/* ─── TOPBAR ─── */
+.topbar{background:var(--g1);padding:8px 6%;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:rgba(255,255,255,.75)}
+.topbar a{color:var(--gold2);text-decoration:none;margin-left:16px}
+.topbar-right{display:flex;gap:20px;align-items:center}
+
+/* ─── NAV ─── */
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,240,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 6%}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{width:44px;height:44px;background:linear-gradient(135deg,var(--g1),var(--g2));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.logo-text{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--g1);line-height:1.1}
+.logo-text small{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:.68rem;font-weight:500;color:var(--mid);letter-spacing:.06em}
+.nav-links{display:flex;gap:4px;list-style:none}
+.nav-links a{padding:8px 14px;border-radius:8px;text-decoration:none;font-size:.88rem;font-weight:500;color:var(--mid);transition:all .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--g1);background:rgba(26,92,58,.07)}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.btn-ghost{border:1.5px solid var(--border);background:transparent;padding:9px 20px;border-radius:8px;font-size:.85rem;font-weight:600;color:var(--g1);cursor:pointer;text-decoration:none;transition:all .2s}
+.btn-ghost:hover{border-color:var(--g1);background:rgba(26,92,58,.05)}
+.btn-fill{background:var(--g1);color:#fff;padding:9px 22px;border-radius:8px;font-size:.85rem;font-weight:600;border:none;cursor:pointer;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+.btn-fill:hover{background:var(--g2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,92,58,.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.hamburger span{width:24px;height:2px;background:var(--g1);border-radius:2px;transition:all .3s}
+
+/* ─── PAGE SYSTEM ─── */
+.page{display:none;animation:fadeIn .4s ease}
+.page.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── HERO ─── */
+.hero{min-height:calc(100vh - 70px);background:linear-gradient(135deg,var(--g1) 0%,#0d3320 60%,#182e1f 100%);position:relative;overflow:hidden;display:flex;align-items:center}
+.hero-bg-pattern{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:40px 40px}
+.hero-glow{position:absolute;right:-100px;top:50%;transform:translateY(-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(76,175,128,.18),transparent 70%);pointer-events:none}
+.hero-inner{max-width:1260px;margin:0 auto;padding:80px 6%;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;position:relative;z-index:2;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(200,153,58,.15);border:1px solid rgba(200,153,58,.35);color:var(--gold2);font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:28px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);color:#fff;font-weight:700;line-height:1.1;margin-bottom:12px}
+.hero h1 .accent{color:var(--gold2);font-style:italic}
+.hero-sub{color:rgba(255,255,255,.55);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;margin-bottom:20px}
+.hero-desc{color:rgba(255,255,255,.7);font-size:1rem;line-height:1.8;margin-bottom:36px;max-width:500px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-hero-primary{background:var(--gold);color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;transition:all .2s;box-shadow:0 6px 24px rgba(200,153,58,.4)}
+.btn-hero-primary:hover{background:var(--gold2);color:var(--dark);transform:translateY(-2px)}
+.btn-hero-outline{border:1.5px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);padding:14px 28px;border-radius:10px;font-weight:500;font-size:.95rem;text-decoration:none;transition:all .2s}
+.btn-hero-outline:hover{border-color:var(--gold2);color:var(--gold2)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border-radius:14px;overflow:hidden;margin-top:44px}
+.h-stat{padding:22px 18px;text-align:center;background:rgba(255,255,255,.05)}
+.h-stat-n{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--gold2);display:block}
+.h-stat-l{color:rgba(255,255,255,.5);font-size:.75rem;margin-top:2px}
+.hero-live{display:inline-flex;align-items:center;gap:8px;color:var(--g3);font-size:.8rem;font-weight:600;margin-top:20px}
+.hero-live::before{content:'●';font-size:9px;animation:blink 1.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* HERO CARD */
+.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:32px;backdrop-filter:blur(14px)}
+.hero-card-head{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.doctor-thumb{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--g3),var(--g2));display:flex;align-items:center;justify-content:center;font-size:26px;border:2px solid rgba(255,255,255,.2)}
+.hc-name{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.1rem;font-weight:700}
+.hc-deg{color:rgba(255,255,255,.55);font-size:.78rem}
+.hc-stars{color:var(--gold2);font-size:.85rem;margin-top:4px}
+.quick-book{margin-top:24px}
+.qb-title{color:rgba(255,255,255,.5);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+.qb-service-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.qb-chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.75);font-size:.78rem;padding:8px 10px;border-radius:8px;text-align:center;cursor:pointer;transition:all .2s}
+.qb-chip:hover,.qb-chip.sel{background:rgba(76,175,128,.2);border-color:var(--g3);color:var(--g3)}
+.qb-call{width:100%;background:var(--g2);color:#fff;border:none;border-radius:10px;padding:13px;font-size:.9rem;font-weight:700;cursor:pointer;margin-top:8px;transition:all .2s}
+.qb-call:hover{background:var(--g1)}
+
+/* ─── SECTION COMMONS ─── */
+section{padding:90px 6%}
+.max{max-width:1260px;margin:0 auto}
+.sec-label{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--g2);margin-bottom:10px}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;color:var(--g1);line-height:1.15;margin-bottom:14px}
+.sec-title .i{font-style:italic;color:var(--gold)}
+.sec-desc{color:var(--mid);font-size:.97rem;line-height:1.8;max-width:560px}
+.sec-head{margin-bottom:56px}
+.sec-head.center{text-align:center}
+.sec-head.center .sec-desc{margin:0 auto}
+
+/* ─── MARQUEE ─── */
+.marquee-strip{background:var(--g1);padding:14px 0;overflow:hidden}
+.marquee-inner{display:flex;gap:40px;animation:marquee 25s linear infinite;white-space:nowrap}
+.marquee-inner:hover{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.m-item{color:rgba(255,255,255,.75);font-size:.83rem;font-weight:500;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.m-item::before{content:'✦';color:var(--gold2);font-size:10px}
+
+/* ─── SERVICES GRID ─── */
+.services-bg{background:var(--white)}
+.serv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.serv-card{background:var(--cream);border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:all .25s;cursor:pointer;position:relative;overflow:hidden}
+.serv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g2),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.serv-card:hover{transform:translateY(-5px);box-shadow:0 12px 36px rgba(26,92,58,.12);background:var(--white)}
+.serv-card:hover::before{transform:scaleX(1)}
+.s-icon{font-size:30px;margin-bottom:16px}
+.s-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px}
+.s-desc{font-size:.82rem;color:var(--light);line-height:1.65}
+.s-more{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:600;color:var(--g2);margin-top:14px;text-decoration:none}
+.s-more:hover{color:var(--g1)}
+
+/* ─── DOCTOR SECTION ─── */
+.doctors-sec{background:var(--cream)}
+.dr-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.dr-img-wrap{position:relative}
+.dr-photo{width:100%;border-radius:24px;background:linear-gradient(135deg,var(--g1),var(--g2));min-height:440px;display:flex;align-items:center;justify-content:center;font-size:80px;overflow:hidden}
+.dr-badge-exp{position:absolute;bottom:24px;left:24px;background:#fff;border-radius:14px;padding:16px 20px;box-shadow:0 8px 32px rgba(0,0,0,.1)}
+.dr-badge-exp .n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--g1);display:block;line-height:1}
+.dr-badge-exp .l{font-size:.75rem;color:var(--mid);margin-top:4px}
+.dr-badge-rating{position:absolute;top:24px;right:24px;background:var(--gold);color:#fff;border-radius:12px;padding:12px 16px;text-align:center}
+.dr-badge-rating .r{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;line-height:1}
+.dr-badge-rating .rl{font-size:.7rem;margin-top:2px;opacity:.85}
+.dr-info .title{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--g2);font-weight:700;margin-bottom:6px}
+.dr-info h2{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--g1);margin-bottom:4px}
+.dr-info .deg{color:var(--mid);font-size:.9rem;margin-bottom:20px}
+.dr-info p{color:var(--mid);line-height:1.8;margin-bottom:24px;font-size:.95rem}
+.dr-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{background:rgba(26,92,58,.08);color:var(--g1);font-size:.78rem;font-weight:600;padding:6px 14px;border-radius:100px;border:1px solid rgba(26,92,58,.15)}
+.dr-metrics{display:flex;gap:32px;margin-bottom:28px}
+.dm-item .n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--g1)}
+.dm-item .l{font-size:.78rem;color:var(--light)}
+
+/* Doctor grid */
+.dr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:48px}
+.dr-card{background:var(--white);border-radius:18px;overflow:hidden;border:1px solid var(--border);transition:all .25s}
+.dr-card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(26,92,58,.12)}
+.dr-card-top{background:linear-gradient(135deg,var(--g1),var(--g2));padding:24px;display:flex;align-items:center;gap:14px}
+.dr-avatar{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.dr-card-name{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.05rem;font-weight:700}
+.dr-card-spec{color:rgba(255,255,255,.6);font-size:.75rem;margin-top:3px}
+.dr-card-exp{background:var(--gold);color:#fff;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:100px;margin-top:6px;display:inline-block}
+.dr-card-body{padding:18px 20px}
+.dr-card-time{display:flex;align-items:center;gap:8px;background:var(--cream);border-radius:8px;padding:10px 12px;font-size:.8rem;color:var(--mid);margin-bottom:14px}
+.dr-tag-list{display:flex;flex-wrap:wrap;gap:6px}
+.dr-tag{font-size:.72rem;background:rgba(76,175,128,.1);color:var(--g2);padding:4px 10px;border-radius:6px;font-weight:500}
+
+/* ─── REVIEWS CAROUSEL ─── */
+.reviews-sec{background:var(--g1);overflow:hidden}
+.reviews-sec .sec-label{color:var(--gold2)}
+.reviews-sec .sec-title{color:#fff}
+.reviews-sec .sec-title .i{color:var(--gold2)}
+.reviews-layout{display:grid;grid-template-columns:300px 1fr;gap:60px;align-items:start}
+.rev-big-num{font-family:'Cormorant Garamond',serif;font-size:7rem;font-weight:700;color:rgba(255,255,255,.08);line-height:1;margin-bottom:-20px}
+.rev-agg{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:24px;margin-top:8px}
+.rev-agg-n{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--gold2)}
+.rev-agg-stars{color:var(--gold2);font-size:1.1rem;margin:6px 0}
+.rev-agg-l{color:rgba(255,255,255,.55);font-size:.82rem}
+.rev-breakdown{margin-top:16px}
+.rb-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.rb-label{color:rgba(255,255,255,.6);font-size:.78rem;width:20px}
+.rb-bar{flex:1;height:6px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
+.rb-fill{height:100%;background:var(--gold);border-radius:3px;transition:width .8s}
+.rb-count{color:rgba(255,255,255,.4);font-size:.72rem;width:24px;text-align:right}
+.carousel-wrap{position:relative;overflow:hidden}
+.carousel-track{display:flex;gap:20px;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.rev-card{flex:0 0 calc(50% - 10px);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:26px;backdrop-filter:blur(10px)}
+.rev-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+.rev-name{font-weight:700;color:#fff;font-size:.95rem}
+.rev-date{color:rgba(255,255,255,.35);font-size:.75rem;margin-top:3px}
+.rev-stars{color:var(--gold2);font-size:.85rem}
+.rev-badge{background:rgba(76,175,128,.2);color:var(--g3);font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:100px;border:1px solid rgba(76,175,128,.3)}
+.rev-text{color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75}
+.carousel-controls{display:flex;gap:12px;margin-top:24px}
+.car-btn{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;font-size:1.1rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.car-btn:hover{background:var(--g2);border-color:var(--g2)}
+.car-dots{display:flex;gap:8px;align-items:center;margin-left:8px}
+.c-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .2s}
+.c-dot.active{background:var(--gold2);width:22px;border-radius:4px}
+
+/* ─── TRANSFORMATIONS ─── */
+.transform-sec{background:var(--cream2)}
+.tf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.tf-card{border-radius:16px;overflow:hidden;background:var(--white);box-shadow:0 2px 16px rgba(0,0,0,.06);transition:transform .25s}
+.tf-card:hover{transform:scale(1.02)}
+.tf-img{height:180px;background:linear-gradient(135deg,var(--g3),var(--g1));display:flex;align-items:center;justify-content:center;font-size:48px;position:relative}
+.tf-before-after{position:absolute;bottom:10px;left:10px;display:flex;gap:6px}
+.tf-ba-tag{background:rgba(0,0,0,.5);color:#fff;font-size:.65rem;font-weight:700;padding:3px 8px;border-radius:4px}
+.tf-info{padding:14px 16px}
+.tf-type{font-size:.8rem;font-weight:600;color:var(--g2);margin-bottom:4px}
+.tf-period{font-size:.75rem;color:var(--light)}
+
+/* ─── CONSULTATION FORM ─── */
+.consult-sec{background:var(--g1)}
+.consult-layout{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center}
+.consult-label{color:var(--gold2);font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:10px}
+.consult-title{font-family:'Cormorant Garamond',serif;color:#fff;font-size:2.4rem;font-weight:700;margin-bottom:16px;line-height:1.15}
+.consult-title .i{font-style:italic;color:var(--gold2)}
+.consult-points{list-style:none;margin-bottom:28px}
+.consult-points li{color:rgba(255,255,255,.7);font-size:.9rem;padding:8px 0;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.07)}
+.consult-points li::before{content:'✓';color:var(--g3);font-weight:700;flex-shrink:0}
+.form-card{background:var(--white);border-radius:20px;padding:32px;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--g1);margin-bottom:22px}
+.form-row{margin-bottom:16px}
+.form-row label{display:block;font-size:.78rem;font-weight:600;color:var(--mid);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em}
+.form-row input,.form-row select,.form-row textarea{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:11px 14px;font-size:.9rem;font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--cream);transition:border-color .2s;outline:none}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:var(--g2);background:#fff}
+.form-row textarea{height:90px;resize:none}
+.form-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.submit-btn{width:100%;background:var(--g1);color:#fff;border:none;border-radius:10px;padding:14px;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .2s;margin-top:4px}
+.submit-btn:hover{background:var(--g2);transform:translateY(-1px)}
+.form-note{font-size:.72rem;color:var(--light);text-align:center;margin-top:10px}
+
+/* ─── BLOGS ─── */
+.blog-sec{background:var(--white)}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.blog-card{border-radius:18px;overflow:hidden;border:1px solid var(--border);background:var(--cream);transition:all .25s}
+.blog-card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(26,92,58,.1);background:var(--white)}
+.blog-img{height:200px;background:linear-gradient(135deg,var(--g2),var(--g1));display:flex;align-items:center;justify-content:center;font-size:48px;position:relative}
+.blog-cat{position:absolute;top:14px;left:14px;background:var(--gold);color:#fff;font-size:.68rem;font-weight:700;padding:4px 12px;border-radius:100px;text-transform:uppercase;letter-spacing:.06em}
+.blog-body{padding:22px}
+.blog-meta{display:flex;gap:14px;font-size:.75rem;color:var(--light);margin-bottom:10px}
+.blog-meta span::before{content:'•';margin-right:6px}
+.blog-meta span:first-child::before{content:''}
+.blog-h{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px;line-height:1.35}
+.blog-excerpt{font-size:.83rem;color:var(--mid);line-height:1.65;margin-bottom:16px}
+.blog-read{font-size:.8rem;font-weight:700;color:var(--g2);text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.blog-read:hover{color:var(--g1)}
+
+/* ─── BLOG DETAIL ─── */
+.blog-detail{max-width:760px;margin:0 auto;padding:60px 6%}
+.blog-detail-cat{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g2);margin-bottom:12px}
+.blog-detail h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:var(--g1);line-height:1.2;margin-bottom:16px}
+.blog-detail-meta{display:flex;gap:18px;font-size:.82rem;color:var(--light);padding-bottom:24px;border-bottom:1px solid var(--border);margin-bottom:28px}
+.blog-detail-img{width:100%;height:320px;background:linear-gradient(135deg,var(--g2),var(--g1));border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:72px;margin-bottom:32px}
+.blog-content h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--g1);margin:28px 0 12px}
+.blog-content p{color:var(--mid);line-height:1.85;font-size:.95rem;margin-bottom:16px}
+.blog-content ul{color:var(--mid);font-size:.93rem;line-height:1.9;margin-bottom:16px;padding-left:20px}
+.blog-content li{margin-bottom:4px}
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--g2);font-size:.85rem;font-weight:600;text-decoration:none;margin-bottom:24px;cursor:pointer}
+.back-btn:hover{color:var(--g1)}
+
+/* ─── ABOUT PAGE ─── */
+.about-hero{background:linear-gradient(135deg,var(--g1),#0d3320);padding:100px 6% 80px;text-align:center}
+.about-hero .sec-label{color:var(--gold2)}
+.about-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;font-weight:700;margin-bottom:16px}
+.about-hero p{color:rgba(255,255,255,.65);max-width:560px;margin:0 auto;line-height:1.8}
+.about-body{background:var(--white);padding:80px 6%}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:80px}
+.about-grid:nth-child(even){direction:rtl}
+.about-grid:nth-child(even)>*{direction:ltr}
+.about-img-box{border-radius:20px;background:linear-gradient(135deg,var(--g3),var(--g1));min-height:320px;display:flex;align-items:center;justify-content:center;font-size:72px}
+.about-grid h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--g1);margin-bottom:14px}
+.about-grid p{color:var(--mid);line-height:1.8;margin-bottom:16px}
+.value-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:60px}
+.value-card{background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border);text-align:center}
+.value-icon{font-size:32px;margin-bottom:14px}
+.value-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px}
+.value-desc{font-size:.83rem;color:var(--mid);line-height:1.65}
+
+/* ─── CONTACT PAGE ─── */
+.contact-hero{background:linear-gradient(135deg,var(--g1),#0d3320);padding:100px 6% 80px;text-align:center}
+.contact-hero .sec-label{color:var(--gold2)}
+.contact-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;font-weight:700;margin-bottom:16px}
+.contact-body{padding:80px 6%;background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact-info-item{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--border)}
+.ci-icon{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,var(--g1),var(--g2));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.ci-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--light);margin-bottom:5px;font-weight:600}
+.ci-val{font-size:.95rem;font-weight:600;color:var(--text);line-height:1.5}
+.ci-val a{color:var(--g2);text-decoration:none}
+.map-box{background:linear-gradient(135deg,var(--g1),#0d3320);border-radius:20px;padding:40px;text-align:center;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.map-box .map-icon{font-size:52px}
+.map-box h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.3rem;font-weight:700}
+.map-box p{color:rgba(255,255,255,.6);font-size:.88rem;line-height:1.7}
+.map-link{background:var(--gold);color:#fff;padding:11px 26px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.88rem;transition:all .2s;margin-top:4px}
+.map-link:hover{background:var(--gold2);color:var(--dark)}
+
+/* ─── FOOTER ─── */
+footer{background:var(--dark);padding:60px 6% 28px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-brand .logo-text{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.3rem;font-weight:700;margin-bottom:12px}
+.footer-brand p{color:rgba(255,255,255,.45);font-size:.83rem;line-height:1.7;margin-bottom:18px}
+.footer-phones{display:flex;flex-direction:column;gap:8px}
+.footer-phone{color:var(--gold2);font-weight:600;font-size:.9rem;text-decoration:none}
+.footer-col h4{color:#fff;font-size:.85rem;font-weight:700;margin-bottom:16px;letter-spacing:.04em}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{color:rgba(255,255,255,.45);font-size:.83rem;text-decoration:none;transition:color .2s}
+.footer-col ul li a:hover{color:var(--g3)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{color:rgba(255,255,255,.3);font-size:.78rem}
+.footer-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(76,175,128,.12);border:1px solid rgba(76,175,128,.2);color:var(--g3);font-size:.72rem;padding:4px 12px;border-radius:100px}
+.footer-badge::before{content:'●';font-size:7px;animation:blink 1.4s infinite}
+
+/* ─── LABS PAGE ─── */
+.lab-hero{background:linear-gradient(135deg,var(--g1),#0d3320);padding:100px 6% 80px;text-align:center}
+.lab-hero .sec-label{color:var(--gold2)}
+.lab-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;font-weight:700;margin-bottom:16px}
+.lab-hero p{color:rgba(255,255,255,.65);max-width:540px;margin:0 auto;line-height:1.8}
+.lab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;padding:60px 6%;background:var(--white);max-width:1260px;margin:0 auto}
+.lab-item{background:var(--cream);border-radius:14px;padding:22px;border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start}
+.lab-icon{font-size:24px;flex-shrink:0;margin-top:2px}
+.lab-name{font-weight:700;color:var(--g1);font-size:.95rem;margin-bottom:4px}
+.lab-detail{font-size:.8rem;color:var(--light);line-height:1.55}
+
+/* ─── EMERGENCY STRIP ─── */
+.emergency{background:linear-gradient(90deg,#b03030,#d94040);padding:14px 6%;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.emergency p{color:#fff;font-weight:600;font-size:.88rem;display:flex;align-items:center;gap:8px}
+.emergency a{color:#fff;background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.35);padding:7px 20px;border-radius:6px;font-weight:700;text-decoration:none;font-size:.88rem;transition:all .2s}
+.emergency a:hover{background:#fff;color:#b03030}
+
+/* ─── MOBILE NAV ─── */
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--white);z-index:190;border-bottom:1px solid var(--border);box-shadow:0 8px 32px rgba(0,0,0,.1);padding:16px 6% 24px}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none}
+.mobile-menu ul li a{display:block;padding:12px 0;font-size:1rem;font-weight:500;color:var(--text);text-decoration:none;border-bottom:1px solid var(--border)}
+.mobile-menu ul li:last-child a{border-bottom:none}
+.mobile-cta{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-card{display:none}
+  .dr-layout{grid-template-columns:1fr}
+  .consult-layout{grid-template-columns:1fr}
+  .reviews-layout{grid-template-columns:1fr}
+  .rev-card{flex:0 0 calc(100% - 10px)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .topbar{display:none}
+  .nav-links,.nav-actions{display:none}
+  .hamburger{display:flex}
+  section{padding:60px 5%}
+  .hero-inner{padding:60px 5%}
+  .hero h1{font-size:2.2rem}
+  .hero-stats{grid-template-columns:repeat(3,1fr)}
+  .form-grid-2{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-col:nth-child(3),.footer-col:nth-child(4){display:none}
+  .rev-card{flex:0 0 100%}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>🌿 Akshat Ayurvedic & Multi-Specialty Hospital, Gangapur City</span>
+  <div class="topbar-right">
+    <span>Always Open · 24×7 Emergency</span>
+    <a href="tel:8432127462">📞 8432127462</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#" onclick="showPage('home')">
+      <div class="logo-mark">🌿</div>
+      <div class="logo-text">Akshat Ayurvedic
+        <small>Multi-Specialty Hospital</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" class="active" onclick="showPage('home');setActive(this)">Home</a></li>
+      <li><a href="#" onclick="showPage('services');setActive(this)">Services</a></li>
+      <li><a href="#" onclick="showPage('doctors');setActive(this)">Doctors</a></li>
+      <li><a href="#" onclick="showPage('lab');setActive(this)">Lab & Tests</a></li>
+      <li><a href="#" onclick="showPage('blog');setActive(this)">Health Blog</a></li>
+      <li><a href="#" onclick="showPage('about');setActive(this)">About Us</a></li>
+      <li><a href="#" onclick="showPage('contact');setActive(this)">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="tel:8432127462" class="btn-ghost">📞 Call Us</a>
+      <a href="#" class="btn-fill" onclick="showPage('contact')">Book Appointment →</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#" onclick="showPage('home');toggleMenu()">🏠 Home</a></li>
+    <li><a href="#" onclick="showPage('services');toggleMenu()">🩺 Services</a></li>
+    <li><a href="#" onclick="showPage('doctors');toggleMenu()">👨‍⚕️ Doctors</a></li>
+    <li><a href="#" onclick="showPage('lab');toggleMenu()">🔬 Lab & Tests</a></li>
+    <li><a href="#" onclick="showPage('blog');toggleMenu()">📰 Health Blog</a></li>
+    <li><a href="#" onclick="showPage('about');toggleMenu()">🏥 About Us</a></li>
+    <li><a href="#" onclick="showPage('contact');toggleMenu()">📍 Contact</a></li>
+  </ul>
+  <div class="mobile-cta">
+    <a href="tel:8432127462" class="btn-fill" style="justify-content:center">📞 Call: 8432127462</a>
+    <a href="tel:07463469884" class="btn-ghost" style="text-align:center">📞 07463-469884</a>
+  </div>
+</div>
+
+<!-- ════════════════════ HOME PAGE ════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">Gangapur City's Trusted Healthcare</div>
+        <p class="hero-sub">Ancient Wisdom · Modern Medicine</p>
+        <h1>
+          Healing You With<br>
+          <span class="accent">Nature & Science</span>
+        </h1>
+        <p class="hero-desc">Akshat Ayurvedic & Multi-Specialty Hospital combines centuries of Ayurvedic tradition with cutting-edge modern medicine. Compassionate care for every patient, every day.</p>
+        <div class="hero-btns">
+          <a href="#" class="btn-hero-primary" onclick="showPage('contact')">Book Free Consultation</a>
+          <a href="#" class="btn-hero-outline" onclick="showPage('services')">Explore Services →</a>
+        </div>
+        <div class="hero-live">Always Open · 24×7 Emergency Available</div>
+        <div class="hero-stats">
+          <div class="h-stat"><span class="h-stat-n">20+</span><span class="h-stat-l">Beds</span></div>
+          <div class="h-stat"><span class="h-stat-n">25+</span><span class="h-stat-l">Yrs Expertise</span></div>
+          <div class="h-stat"><span class="h-stat-n">4+</span><span class="h-stat-l">Specialists</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-head">
+          <div class="doctor-thumb">🌿</div>
+          <div>
+            <div class="hc-name">Vaidya J.P. Sharma</div>
+            <div class="hc-deg">BAMS · Panchkarma Specialist · 25 Yrs</div>
+            <div class="hc-stars">★★★★★ Lead Physician</div>
+          </div>
+        </div>
+        <div class="quick-book">
+          <div class="qb-title">Quick Book a Service</div>
+          <div class="qb-service-grid">
+            <div class="qb-chip sel">General OPD</div>
+            <div class="qb-chip">Panchkarma</div>
+            <div class="qb-chip">Physiotherapy</div>
+            <div class="qb-chip">Skin & Hair</div>
+            <div class="qb-chip">Lab Tests</div>
+            <div class="qb-chip">Emergency</div>
+          </div>
+          <button class="qb-call" onclick="showPage('contact')">📞 Call to Book Appointment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <span class="m-item">General Medicine</span>
+      <span class="m-item">Panchkarma Therapy</span>
+      <span class="m-item">Physiotherapy & Rehab</span>
+      <span class="m-item">Skin & Dermatology</span>
+      <span class="m-item">Paralysis Treatment</span>
+      <span class="m-item">Diagnostic Lab</span>
+      <span class="m-item">24×7 Emergency</span>
+      <span class="m-item">Ayurvedic Medicine</span>
+      <span class="m-item">Netra Darshan Therapy</span>
+      <span class="m-item">Janu Basti Therapy</span>
+      <span class="m-item">Nursing & Rehabilitation</span>
+      <!-- duplicate for seamless loop -->
+      <span class="m-item">General Medicine</span>
+      <span class="m-item">Panchkarma Therapy</span>
+      <span class="m-item">Physiotherapy & Rehab</span>
+      <span class="m-item">Skin & Dermatology</span>
+      <span class="m-item">Paralysis Treatment</span>
+      <span class="m-item">Diagnostic Lab</span>
+      <span class="m-item">24×7 Emergency</span>
+      <span class="m-item">Ayurvedic Medicine</span>
+      <span class="m-item">Netra Darshan Therapy</span>
+      <span class="m-item">Janu Basti Therapy</span>
+      <span class="m-item">Nursing & Rehabilitation</span>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="services-bg">
+    <div class="max">
+      <div class="sec-head">
+        <div class="sec-label">Why Choose Us</div>
+        <div class="sec-title">Gangapur Mein Koi Fark Karta Hai?<br><span class="i">Haan — Akshat Hospital.</span></div>
+        <div class="sec-desc">We go beyond routine treatment to offer personalised, compassionate care rooted in both Ayurvedic wisdom and modern diagnostics.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px">
+        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
+          <div style="font-size:28px;margin-bottom:14px">🌿</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">Ayurveda First Philosophy</div>
+          <div style="font-size:.83rem;color:var(--light);line-height:1.65">Root-cause treatment using classical Ayurvedic methods before resorting to invasive procedures.</div>
+        </div>
+        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
+          <div style="font-size:28px;margin-bottom:14px">🏥</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">Modern Infrastructure</div>
+          <div style="font-size:.83rem;color:var(--light);line-height:1.65">20+ bed hospital with full diagnostic lab, pharmacy, and rehabilitation centre under one roof.</div>
+        </div>
+        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
+          <div style="font-size:28px;margin-bottom:14px">⏰</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">Always Available</div>
+          <div style="font-size:.83rem;color:var(--light);line-height:1.65">24×7 emergency services, 365 days a year. We are always here when you need us most.</div>
+        </div>
+        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
+          <div style="font-size:28px;margin-bottom:14px">💰</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">Transparent Pricing</div>
+          <div style="font-size:.83rem;color:var(--light);line-height:1.65">Affordable treatment rates with no hidden charges. Quality care accessible to all.</div>
+        </div>
+        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
+          <div style="font-size:28px;margin-bottom:14px">👨‍⚕️</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">Expert Specialists</div>
+          <div style="font-size:.83rem;color:var(--light);line-height:1.65">Qualified doctors with up to 25 years of experience across multiple specialities.</div>
+        </div>
+        <div style="background:var(--cream);border-radius:16px;padding:26px;border:1px solid var(--border)">
+          <div style="font-size:28px;margin-bottom:14px">🧪</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);margin-bottom:8px">In-house Lab</div>
+          <div style="font-size:.83rem;color:var(--light);line-height:1.65">CBC, Sugar, Thyroid, Hormones, Vitamin B12, D3 and more — results within hours.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED SERVICES -->
+  <section style="background:var(--cream2)">
+    <div class="max">
+      <div class="sec-head center">
+        <div class="sec-label">14 Specialised Services</div>
+        <div class="sec-title">Complete Care <span class="i">Under One Roof</span></div>
+        <div class="sec-desc">From Ayurvedic therapies to modern diagnostics — every speciality you need in one trusted hospital.</div>
+      </div>
+      <div class="serv-grid">
+        <div class="serv-card"><div class="s-icon">🩺</div><div class="s-name">General Medicine</div><div class="s-desc">Dengue, malaria, typhoid, diabetes, B.P., heart conditions & seasonal illness.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🧠</div><div class="s-name">Paralysis & Neurology</div><div class="s-desc">Stroke, polio, sciatica, limb numbness, migraine & nerve disorders.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🌿</div><div class="s-name">Panchkarma Therapy</div><div class="s-desc">Classical Ayurvedic detox — Vamana, Virechana, Basti, Nasya & more.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🦠</div><div class="s-name">Skin & Dermatology</div><div class="s-desc">Eczema, acne, psoriasis, vitiligo, hair fall & all skin conditions.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">🤸</div><div class="s-name">Physiotherapy</div><div class="s-desc">Back pain, joint pain, arthritis, paralysis rehab & sports injuries.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+        <div class="serv-card"><div class="s-icon">👁️</div><div class="s-name">Netra Darshan Therapy</div><div class="s-desc">Traditional Ayurvedic eye care for vision & eye health.</div><a class="s-more" href="#" onclick="showPage('services')">Learn more →</a></div>
+      </div>
+      <div style="text-align:center;margin-top:36px">
+        <a href="#" class="btn-fill" onclick="showPage('services')" style="display:inline-flex;padding:14px 36px;font-size:.95rem">View All 14 Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD DOCTOR -->
+  <section class="doctors-sec">
+    <div class="max">
+      <div class="dr-layout">
+        <div class="dr-img-wrap">
+          <div class="dr-photo">🌿</div>
+          <div class="dr-badge-exp"><span class="n">25</span><span class="l">Years of Experience</span></div>
+          <div class="dr-badge-rating"><div class="r">★ 4.9</div><div class="rl">Patient Rating</div></div>
+        </div>
+        <div class="dr-info">
+          <div class="title">Lead Physician & Founder</div>
+          <h2>Vaidya J.P. Sharma</h2>
+          <div class="deg">BAMS · Panchkarma Specialist · Naturopath</div>
+          <p>With 25 years of dedicated practice in Ayurvedic medicine, Vaidya J.P. Sharma has transformed thousands of lives through classical Panchkarma treatments and holistic naturopathy. His philosophy centres on treating the root cause — not just the symptom.</p>
+          <div class="dr-chips">
+            <span class="chip">BAMS Graduate</span>
+            <span class="chip">Panchkarma Expert</span>
+            <span class="chip">Naturopath</span>
+            <span class="chip">Digestive Specialist</span>
+            <span class="chip">Piles & Liver Expert</span>
+          </div>
+          <div class="dr-metrics">
+            <div class="dm-item"><div class="n">25+</div><div class="l">Years Practice</div></div>
+            <div class="dm-item"><div class="n">5000+</div><div class="l">Patients Treated</div></div>
+            <div class="dm-item"><div class="n">4.9★</div><div class="l">Avg. Rating</div></div>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a href="tel:8432127462" class="btn-fill">📞 Book with Him</a>
+            <a href="#" class="btn-ghost" onclick="showPage('doctors')">Meet All Doctors</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATIENT REVIEWS CAROUSEL -->
+  <section class="reviews-sec">
+    <div class="max">
+      <div class="reviews-layout">
+        <div>
+          <div class="rev-big-num">128+</div>
+          <div class="sec-label">Patient Stories</div>
+          <div class="sec-title">Patients Can't Be<br>Wrong — <span class="i">See Their Stories</span></div>
+          <div class="rev-agg">
+            <div class="rev-agg-n">4.9</div>
+            <div class="rev-agg-stars">★★★★★</div>
+            <div class="rev-agg-l">Based on 128+ patient reviews</div>
+            <div class="rev-breakdown">
+              <div class="rb-row"><span class="rb-label">5</span><div class="rb-bar"><div class="rb-fill" style="width:88%"></div></div><span class="rb-count">112</span></div>
+              <div class="rb-row"><span class="rb-label">4</span><div class="rb-bar"><div class="rb-fill" style="width:9%"></div></div><span class="rb-count">12</span></div>
+              <div class="rb-row"><span class="rb-label">3</span><div class="rb-bar"><div class="rb-fill" style="width:3%"></div></div><span class="rb-count">4</span></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="carousel-wrap">
+            <div class="carousel-track" id="revTrack">
+              <div class="rev-card">
+                <div class="rev-top">
+                  <div><div class="rev-name">Ramesh Sharma</div><div class="rev-date">March 2024</div></div>
+                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">Panchkarma</div></div>
+                </div>
+                <div class="rev-text">"I suffered from chronic digestive issues for 8 years. After just 21 days of Panchkarma treatment with Vaidya J.P. Sharma, my condition improved dramatically. Truly life-changing care."</div>
+              </div>
+              <div class="rev-card">
+                <div class="rev-top">
+                  <div><div class="rev-name">Sunita Devi</div><div class="rev-date">February 2024</div></div>
+                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">Physiotherapy</div></div>
+                </div>
+                <div class="rev-text">"Dr. Gaurav helped me recover from partial paralysis after stroke. His dedication and expert physiotherapy made me walk again. The entire staff is so caring and professional."</div>
+              </div>
+              <div class="rev-card">
+                <div class="rev-top">
+                  <div><div class="rev-name">Mahesh Gupta</div><div class="rev-date">January 2024</div></div>
+                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">General OPD</div></div>
+                </div>
+                <div class="rev-text">"Dr. R.M. Meena diagnosed my typhoid quickly and treated me so well. Very affordable rates and the lab results came same day. Best hospital in Gangapur City without doubt."</div>
+              </div>
+              <div class="rev-card">
+                <div class="rev-top">
+                  <div><div class="rev-name">Kavita Meena</div><div class="rev-date">December 2023</div></div>
+                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">Skin Care</div></div>
+                </div>
+                <div class="rev-text">"Dr. K.K. Vaishnav treated my psoriasis that other doctors couldn't resolve. After 2 months of treatment, my skin is clear. Very knowledgeable and kind doctor."</div>
+              </div>
+              <div class="rev-card">
+                <div class="rev-top">
+                  <div><div class="rev-name">Dinesh Kumar</div><div class="rev-date">November 2023</div></div>
+                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">Emergency</div></div>
+                </div>
+                <div class="rev-text">"Had a medical emergency at 2 AM. Akshat Hospital was fully equipped and the staff responded immediately. The 24×7 service is genuine — it literally saved my life."</div>
+              </div>
+              <div class="rev-card">
+                <div class="rev-top">
+                  <div><div class="rev-name">Priya Singh</div><div class="rev-date">October 2023</div></div>
+                  <div><div class="rev-stars">★★★★★</div><div class="rev-badge">Janu Basti</div></div>
+                </div>
+                <div class="rev-text">"My knee pain of 5 years completely gone after Janu Basti therapy! Vaidya ji is a master of Ayurvedic treatments. The hospital is clean, well managed, and affordable."</div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="car-btn" onclick="moveCarousel(-1)">←</button>
+            <button class="car-btn" onclick="moveCarousel(1)">→</button>
+            <div class="car-dots" id="carDots"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSFORMATIONS -->
+  <section class="transform-sec">
+    <div class="max">
+      <div class="sec-head center">
+        <div class="sec-label">Real Results</div>
+        <div class="sec-title">Patient <span class="i">Transformations</span></div>
+        <div class="sec-desc">Real patients, real results. See how our treatments have changed lives across different specialities.</div>
+      </div>
+      <div class="tf-grid">
+        <div class="tf-card"><div class="tf-img" style="background:linear-gradient(135deg,#2d8653,#1a5c3a)">🌿<div class="tf-before-after"><span class="tf-ba-tag">Before</span><span class="tf-ba-tag">After</span></div></div><div class="tf-info"><div class="tf-type">Panchkarma — Digestive Disorder</div><div class="tf-period">21-Day Treatment</div></div></div>
+        <div class="tf-card"><div class="tf-img" style="background:linear-gradient(135deg,#1a5c3a,#4caf80)">🤸<div class="tf-before-after"><span class="tf-ba-tag">Before</span><span class="tf-ba-tag">After</span></div></div><div class="tf-info"><div class="tf-type">Physiotherapy — Paralysis Rehab</div><div class="tf-period">45-Day Program</div></div></div>
+        <div class="tf-card"><div class="tf-img" style="background:linear-gradient(135deg,#4caf80,#2d8653)">🦠<div class="tf-before-after"><span class="tf-ba-tag">Before</span><span class="tf-ba-tag">After</span></div></div><div class="tf-info"><div class="tf-type">Skin Therapy — Psoriasis</div><div class="tf-period">60-Day Treatment</div></div></div>
+        <div class="tf-card"><div class="tf-img" style="background:linear-gradient(135deg,#c8993a,#1a5c3a)">🦵<div class="tf-before-after"><span class="tf-ba-tag">Before</span><span class="tf-ba-tag">After</span></div></div><div class="tf-info"><div class="tf-type">Janu Basti — Knee Pain</div><div class="tf-period">14-Day Course</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE CONSULTATION FORM -->
+  <section class="consult-sec">
+    <div class="max">
+      <div class="consult-layout">
+        <div>
+          <div class="consult-label">Limited Slots Available</div>
+          <div class="consult-title">Get Your <span class="i">Free</span><br>Consultation Today</div>
+          <ul class="consult-points">
+            <li>Expert evaluation by qualified specialists</li>
+            <li>Personalised Ayurvedic & medical treatment plan</li>
+            <li>Affordable, transparent pricing — no hidden costs</li>
+            <li>24×7 emergency services, always available</li>
+            <li>In-house lab for same-day diagnostic results</li>
+            <li>Both OPD & IPD services under one roof</li>
+          </ul>
+        </div>
+        <div class="form-card">
+          <div class="form-title">Book Your Visit</div>
+          <div class="form-row"><label>Full Name</label><input type="text" placeholder="Your full name"></div>
+          <div class="form-grid-2">
+            <div class="form-row"><label>Phone</label><input type="tel" placeholder="Your number"></div>
+            <div class="form-row"><label>Age</label><input type="number" placeholder="Age"></div>
+          </div>
+          <div class="form-row"><label>Service Needed</label>
+            <select>
+              <option>General OPD Consultation</option>
+              <option>Panchkarma Therapy</option>
+              <option>Physiotherapy</option>
+              <option>Skin & Dermatology</option>
+              <option>Lab Tests</option>
+              <option>Paralysis Treatment</option>
+              <option>Netra Darshan Therapy</option>
+              <option>Janu Basti Therapy</option>
+              <option>Emergency</option>
+            </select>
+          </div>
+          <div class="form-row"><label>Message (Optional)</label><textarea placeholder="Describe your concern..."></textarea></div>
+          <button class="submit-btn">📅 Book My Appointment</button>
+          <div class="form-note">Or call directly: <strong>8432127462</strong> · <strong>07463-469884</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="blog-sec">
+    <div class="max">
+      <div class="sec-head">
+        <div class="sec-label">Health Education</div>
+        <div class="sec-title">Advice From <span class="i">Our Doctors</span></div>
+        <div class="sec-desc">Evidence-backed health tips and Ayurvedic wisdom from our specialist team to help you live better.</div>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,var(--g2),var(--g1))">🌿<span class="blog-cat">Ayurveda</span></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span>Vaidya J.P. Sharma</span><span>5 min read</span></div>
+            <div class="blog-h">5 Daily Habits for Healthy Digestion According to Ayurveda</div>
+            <div class="blog-excerpt">Ancient Ayurvedic wisdom offers timeless advice for digestive health. These simple daily practices can transform your gut health naturally...</div>
+            <a class="blog-read" href="#" onclick="showBlogDetail('ayurveda-digestion')">Read Article →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#4caf80,var(--g1))">🤸<span class="blog-cat">Physiotherapy</span></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span>Dr. Gaurav Sharma</span><span>4 min read</span></div>
+            <div class="blog-h">Don't Ignore Back Pain: When to See a Physiotherapist</div>
+            <div class="blog-excerpt">Back pain affects 80% of adults at some point. Knowing when to seek physiotherapy can prevent chronic disability and speed recovery...</div>
+            <a class="blog-read" href="#" onclick="showBlogDetail('back-pain')">Read Article →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,var(--gold),var(--g1))">☀️<span class="blog-cat">Skin Health</span></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span>Dr. K.K. Vaishnav</span><span>6 min read</span></div>
+            <div class="blog-h">Understanding Psoriasis: Causes, Triggers, and Effective Treatments</div>
+            <div class="blog-excerpt">Psoriasis is often misunderstood. Modern dermatology combined with Ayurvedic approaches can provide significant relief for sufferers...</div>
+            <a class="blog-read" href="#" onclick="showBlogDetail('psoriasis')">Read Article →</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px">
+        <a href="#" class="btn-fill" onclick="showPage('blog')" style="display:inline-flex;padding:14px 36px;font-size:.95rem">View All Articles →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMERGENCY STRIP -->
+  <div class="emergency">
+    <p>🚨 Medical Emergency? We're Always Available — 24 × 7</p>
+    <a href="tel:8432127462">Call: 8432127462</a>
+    <a href="tel:07463469884">07463-469884</a>
+  </div>
+
+</div><!-- end home page -->
+
+
+<!-- ════════════════════ SERVICES PAGE ════════════════════ -->
+<div class="page" id="page-services">
+  <div style="background:linear-gradient(135deg,var(--g1),#0d3320);padding:100px 6% 80px;text-align:center">
+    <div class="sec-label" style="color:var(--gold2)">What We Treat</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;font-weight:700;margin-bottom:16px">Our <em style="font-style:italic;color:var(--gold2)">Specialised</em> Services</h1>
+    <p style="color:rgba(255,255,255,.65);max-width:540px;margin:0 auto;line-height:1.8">15+ services combining Ayurvedic wisdom and modern medicine for complete, holistic healthcare.</p>
+  </div>
+  <section style="background:var(--white)">
+    <div class="max">
+      <div class="serv-grid">
+        <div class="serv-card"><div class="s-icon">🩺</div><div class="s-name">General Medicine</div><div class="s-desc">Dengue, malaria, typhoid, fever, seasonal illnesses, B.P., diabetes, chest pain, jaundice, chikungunya.</div></div>
+        <div class="serv-card"><div class="s-icon">🧠</div><div class="s-name">Paralysis & Neurology</div><div class="s-desc">Stroke (paralysis), polio, sciatic nerve pain, limb numbness, migraine, spinal cord issues, nerve disorders.</div></div>
+        <div class="serv-card"><div class="s-icon">🫁</div><div class="s-name">Respiratory Diseases</div><div class="s-desc">Asthma, bronchitis, chronic breathing difficulties, respiratory infections, and related pulmonary conditions.</div></div>
+        <div class="serv-card"><div class="s-icon">🦠</div><div class="s-name">Skin & Dermatology</div><div class="s-desc">Eczema, ringworm, itching, acne, facial marks, psoriasis, vitiligo (white patches), hair fall treatment.</div></div>
+        <div class="serv-card"><div class="s-icon">🫀</div><div class="s-name">Kidney & Urology</div><div class="s-desc">Kidney diseases, urinary tract disorders, renal stones, urinary infections, and renal health management.</div></div>
+        <div class="serv-card"><div class="s-icon">🧬</div><div class="s-name">Mental & Neuro Disorders</div><div class="s-desc">Mental health support, neurological conditions, stress, anxiety, sleep disorders, and cognitive health.</div></div>
+        <div class="serv-card"><div class="s-icon">🔬</div><div class="s-name">Gastroenterology</div><div class="s-desc">Piles (haemorrhoids), chronic constipation, gas, liver disease, abdominal pain, complete digestive care.</div></div>
+        <div class="serv-card"><div class="s-icon">👶</div><div class="s-name">Paediatrics</div><div class="s-desc">Child health care, infant treatment, childhood illnesses, growth monitoring, and vaccinations guidance.</div></div>
+        <div class="serv-card"><div class="s-icon">🌸</div><div class="s-name">Gynaecology</div><div class="s-desc">Women's health, white discharge, menstrual disorders, hormonal imbalance, and comprehensive gynaecological care.</div></div>
+        <div class="serv-card"><div class="s-icon">🤸</div><div class="s-name">Physiotherapy</div><div class="s-desc">Back & neck pain, joint pain, arthritis, paralysis rehabilitation, heel pain, frozen shoulder, sports injuries.</div></div>
+        <div class="serv-card"><div class="s-icon">🌿</div><div class="s-name">Panchkarma Therapy</div><div class="s-desc">Classical Ayurvedic detox — Vamana (emesis), Virechana (purgation), Basti (enema), Nasya (nasal), Raktamokshana.</div></div>
+        <div class="serv-card"><div class="s-icon">👁️</div><div class="s-name">Netra Darshan Therapy</div><div class="s-desc">Traditional Ayurvedic eye treatments — Tarpana, Sekam, Anjana — for vision improvement and eye health.</div></div>
+        <div class="serv-card"><div class="s-icon">🦴</div><div class="s-name">Arthritis & Joint Pain</div><div class="s-desc">Gout, knee pain, back pain, spondylitis, rheumatoid arthritis, comprehensive joint care management.</div></div>
+        <div class="serv-card"><div class="s-icon">💆</div><div class="s-name">Skin Therapy</div><div class="s-desc">Medicated skin treatments combining Ayurvedic and modern dermatological approaches for lasting results.</div></div>
+        <div class="serv-card"><div class="s-icon">🦵</div><div class="s-name">Janu Basti Therapy</div><div class="s-desc">Specialised medicated oil treatment retained over the knee joint for pain, cartilage degeneration, arthritis.</div></div>
+      </div>
+    </div>
+  </section>
+  <div class="emergency">
+    <p>🚨 Need urgent care? We are always open — 24 × 7</p>
+    <a href="tel:8432127462">Call: 8432127462</a>
+  </div>
+</div>
+
+<!-- ════════════════════ DOCTORS PAGE ════════════════════ -->
+<div class="page" id="page-doctors">
+  <div style="background:linear-gradient(135deg,var(--g1),#0d3320);padding:100px 6% 80px;text-align:center">
+    <div class="sec-label" style="color:var(--gold2)">Our Medical Team</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;font-weight:700;margin-bottom:16px">Expert <em style="font-style:italic;color:var(--gold2)">Doctors</em></h1>
+    <p style="color:rgba(255,255,255,.65);max-width:540px;margin:0 auto;line-height:1.8">Qualified, experienced physicians dedicated to personalised and compassionate patient care.</p>
+  </div>
+  <section style="background:var(--white)">
+    <div class="max">
+      <div class="dr-grid" style="margin-top:0">
+        <div class="dr-card">
+          <div class="dr-card-top">
+            <div class="dr-avatar">🌿</div>
+            <div>
+              <div class="dr-card-name">Vaidya J.P. Sharma</div>
+              <div class="dr-card-spec">BAMS · Panchkarma Specialist · Naturopath</div>
+              <div class="dr-card-exp">25 Years Experience</div>
+            </div>
+          </div>
+          <div class="dr-card-body">
+            <div class="dr-card-time">🕐 Evenings from 4:00 PM onwards</div>
+            <div style="color:var(--mid);font-size:.85rem;line-height:1.7;margin-bottom:14px">Lead physician specialising in Ayurvedic detox therapies and digestive health. Expert in classical Panchkarma treatment protocols.</div>
+            <div class="dr-tag-list">
+              <span class="dr-tag">Piles & Haemorrhoids</span>
+              <span class="dr-tag">Constipation & Gas</span>
+              <span class="dr-tag">Liver Disease</span>
+              <span class="dr-tag">Abdominal Pain</span>
+              <span class="dr-tag">Digestive Disorders</span>
+            </div>
+          </div>
+        </div>
+        <div class="dr-card">
+          <div class="dr-card-top">
+            <div class="dr-avatar">🔬</div>
+            <div>
+              <div class="dr-card-name">Dr. K.K. Vaishnav</div>
+              <div class="dr-card-spec">MD Dermatology & Venereology</div>
+              <div class="dr-card-exp">8 Years Experience</div>
+            </div>
+          </div>
+          <div class="dr-card-body">
+            <div class="dr-card-time">🕐 10:00 AM – 2:00 PM</div>
+            <div style="color:var(--mid);font-size:.85rem;line-height:1.7;margin-bottom:14px">Specialist in skin and venereal diseases with expertise in both Ayurvedic and modern dermatological approaches.</div>
+            <div class="dr-tag-list">
+              <span class="dr-tag">Eczema & Ringworm</span>
+              <span class="dr-tag">Acne & Facial Marks</span>
+              <span class="dr-tag">Psoriasis</span>
+              <span class="dr-tag">Vitiligo</span>
+              <span class="dr-tag">Hair Fall</span>
+            </div>
+          </div>
+        </div>
+        <div class="dr-card">
+          <div class="dr-card-top">
+            <div class="dr-avatar">🩺</div>
+            <div>
+              <div class="dr-card-name">Dr. R.M. Meena</div>
+              <div class="dr-card-spec">MBBS, MD General Physician</div>
+              <div class="dr-card-exp">8 Years Experience</div>
+            </div>
+          </div>
+          <div class="dr-card-body">
+            <div class="dr-card-time">🕐 5:00 PM – 7:00 PM</div>
+            <div style="color:var(--mid);font-size:.85rem;line-height:1.7;margin-bottom:14px">General physician with expertise in infectious diseases, metabolic disorders and emergency medicine management.</div>
+            <div class="dr-tag-list">
+              <span class="dr-tag">Dengue & Malaria</span>
+              <span class="dr-tag">Typhoid & Jaundice</span>
+              <span class="dr-tag">Thyroid Disorders</span>
+              <span class="dr-tag">Diabetes & B.P.</span>
+              <span class="dr-tag">Heart Conditions</span>
+            </div>
+          </div>
+        </div>
+        <div class="dr-card">
+          <div class="dr-card-top">
+            <div class="dr-avatar">🤸</div>
+            <div>
+              <div class="dr-card-name">Dr. Gaurav Sharma</div>
+              <div class="dr-card-spec">Physiotherapist</div>
+              <div class="dr-card-exp">3 Years Experience</div>
+            </div>
+          </div>
+          <div class="dr-card-body">
+            <div class="dr-card-time">🕐 7:30 AM – 2:00 PM | 5:00 PM – 9:00 PM</div>
+            <div style="color:var(--mid);font-size:.85rem;line-height:1.7;margin-bottom:14px">Expert physiotherapist specialising in neurological rehabilitation and musculoskeletal pain management.</div>
+            <div class="dr-tag-list">
+              <span class="dr-tag">Paralysis Rehab</span>
+              <span class="dr-tag">Sciatica</span>
+              <span class="dr-tag">Back & Neck Pain</span>
+              <span class="dr-tag">Arthritis</span>
+              <span class="dr-tag">Heel Pain</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ════════════════════ LAB PAGE ════════════════════ -->
+<div class="page" id="page-lab">
+  <div class="lab-hero">
+    <div class="sec-label" style="color:var(--gold2)">Diagnostic Centre</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;font-weight:700;margin-bottom:16px">Lab & <em style="font-style:italic;color:var(--gold2)">Diagnostic Tests</em></h1>
+    <p style="color:rgba(255,255,255,.65);max-width:540px;margin:0 auto;line-height:1.8">In-house diagnostics for fast, accurate results. Most tests reported same day.</p>
+  </div>
+  <div style="padding:60px 6%;background:var(--white)">
+    <div class="max">
+      <div class="sec-head center">
+        <div class="sec-label">Tests Available</div>
+        <div class="sec-title">Complete <span class="i">Diagnostic Services</span></div>
+        <div class="sec-desc">Our in-house lab provides a wide range of diagnostic tests with fast turnaround times and accurate results.</div>
+      </div>
+      <div class="lab-grid" style="padding:0">
+        <div class="lab-item"><div class="lab-icon">🩸</div><div><div class="lab-name">CBC (Complete Blood Count)</div><div class="lab-detail">Full blood profile including RBC, WBC, haemoglobin, platelets — essential for diagnosing infections, anaemia.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">🍬</div><div><div class="lab-name">Blood Sugar (Glucose)</div><div class="lab-detail">Fasting & PP blood glucose levels for diabetes screening and monitoring.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">⚡</div><div><div class="lab-name">Hormonal Profile</div><div class="lab-detail">Comprehensive hormonal panel for thyroid, reproductive and adrenal hormones.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">🔩</div><div><div class="lab-name">IFT (Iron Function Tests)</div><div class="lab-detail">Serum iron, ferritin, TIBC — for diagnosing iron deficiency anaemia.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">🦋</div><div><div class="lab-name">TFT (Thyroid Function Tests)</div><div class="lab-detail">TSH, T3, T4 levels for complete thyroid evaluation and monitoring.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">🦋</div><div><div class="lab-name">Thyroid Panel</div><div class="lab-detail">Detailed thyroid profiling including anti-TPO antibodies for autoimmune disorders.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">🚽</div><div><div class="lab-name">Urine Analysis</div><div class="lab-detail">Complete urine examination including routine & microscopy for kidney and urinary health.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">💊</div><div><div class="lab-name">Vitamin B12</div><div class="lab-detail">B12 deficiency testing — important for nerve health, energy levels, and brain function.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">☀️</div><div><div class="lab-name">Vitamin D3</div><div class="lab-detail">25-OH Vitamin D level testing for bone health, immunity, and muscle function assessment.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">🦠</div><div><div class="lab-name">Dengue / Malaria / Typhoid</div><div class="lab-detail">Rapid antigen tests and confirmatory tests for common infectious diseases.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">💛</div><div><div class="lab-name">Liver Function Tests (LFT)</div><div class="lab-detail">SGPT, SGOT, bilirubin, albumin — complete liver health assessment.</div></div></div>
+        <div class="lab-item"><div class="lab-icon">💙</div><div><div class="lab-name">Kidney Function Tests (KFT)</div><div class="lab-detail">Creatinine, urea, electrolytes — for kidney health monitoring and disease diagnosis.</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ BLOG PAGE ════════════════════ -->
+<div class="page" id="page-blog">
+  <div style="background:linear-gradient(135deg,var(--g1),#0d3320);padding:100px 6% 80px;text-align:center">
+    <div class="sec-label" style="color:var(--gold2)">Health Education</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;font-weight:700;margin-bottom:16px">Health <em style="font-style:italic;color:var(--gold2)">Blog & Advice</em></h1>
+    <p style="color:rgba(255,255,255,.65);max-width:540px;margin:0 auto;line-height:1.8">Expert health guidance from our doctors to help you make informed decisions about your wellbeing.</p>
+  </div>
+  <section class="blog-sec">
+    <div class="max">
+      <div class="blog-grid">
+        <div class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,var(--g2),var(--g1))">🌿<span class="blog-cat">Ayurveda</span></div><div class="blog-body"><div class="blog-meta"><span>Vaidya J.P. Sharma</span><span>5 min read</span></div><div class="blog-h">5 Daily Habits for Healthy Digestion According to Ayurveda</div><div class="blog-excerpt">Ancient wisdom offers timeless advice for gut health. These simple practices can transform your digestion naturally...</div><a class="blog-read" href="#" onclick="showBlogDetail('ayurveda-digestion')">Read Article →</a></div></div>
+        <div class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#4caf80,var(--g1))">🤸<span class="blog-cat">Physiotherapy</span></div><div class="blog-body"><div class="blog-meta"><span>Dr. Gaurav Sharma</span><span>4 min read</span></div><div class="blog-h">Don't Ignore Back Pain: When to See a Physiotherapist</div><div class="blog-excerpt">Back pain affects 80% of adults. Knowing when to seek physio can prevent chronic disability...</div><a class="blog-read" href="#" onclick="showBlogDetail('back-pain')">Read Article →</a></div></div>
+        <div class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,var(--gold),var(--g1))">☀️<span class="blog-cat">Skin Health</span></div><div class="blog-body"><div class="blog-meta"><span>Dr. K.K. Vaishnav</span><span>6 min read</span></div><div class="blog-h">Understanding Psoriasis: Causes, Triggers & Treatments</div><div class="blog-excerpt">Psoriasis is often misunderstood. Modern dermatology combined with Ayurveda can provide significant relief...</div><a class="blog-read" href="#" onclick="showBlogDetail('psoriasis')">Read Article →</a></div></div>
+        <div class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#2d8653,#c8993a)">🩺<span class="blog-cat">General Health</span></div><div class="blog-body"><div class="blog-meta"><span>Dr. R.M. Meena</span><span>3 min read</span></div><div class="blog-h">Dengue: Symptoms, Warning Signs & When to Rush to Hospital</div><div class="blog-excerpt">Dengue can turn severe quickly. Know the warning signs that require immediate medical attention...</div><a class="blog-read" href="#" onclick="showBlogDetail('dengue')">Read Article →</a></div></div>
+        <div class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#1a5c3a,#a8d5bc)">🦵<span class="blog-cat">Ayurveda</span></div><div class="blog-body"><div class="blog-meta"><span>Vaidya J.P. Sharma</span><span>7 min read</span></div><div class="blog-h">Janu Basti Therapy: The Ayurvedic Solution for Knee Pain</div><div class="blog-excerpt">Janu Basti is a traditional Ayurvedic treatment that has helped thousands of knee pain sufferers avoid surgery...</div><a class="blog-read" href="#" onclick="showBlogDetail('janu-basti')">Read Article →</a></div></div>
+        <div class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#0d3320,#4caf80)">🌡️<span class="blog-cat">Wellness</span></div><div class="blog-body"><div class="blog-meta"><span>Dr. Gaurav Sharma</span><span>5 min read</span></div><div class="blog-h">Post-Stroke Rehabilitation: The Critical First 90 Days</div><div class="blog-excerpt">The recovery window after stroke is crucial. Structured physiotherapy in the first 90 days can dramatically improve outcomes...</div><a class="blog-read" href="#" onclick="showBlogDetail('stroke-rehab')">Read Article →</a></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ════════════════════ BLOG DETAIL PAGE ════════════════════ -->
+<div class="page" id="page-blog-detail">
+  <section style="background:var(--white);padding:40px 6% 80px">
+    <div class="max">
+      <a class="back-btn" href="#" onclick="showPage('blog')">← Back to Blog</a>
+      <div id="blogDetailContent"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ════════════════════ ABOUT PAGE ════════════════════ -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div class="sec-label">Our Story</div>
+    <h1>About <em style="font-style:italic;color:var(--gold2)">Akshat Hospital</em></h1>
+    <p>A decade of healing, rooted in Ayurveda, empowered by modern medicine — serving Gangapur City and beyond.</p>
+  </div>
+  <section class="about-body">
+    <div class="max">
+      <div class="about-grid">
+        <div class="about-img-box">🏥</div>
+        <div>
+          <h2>Our Mission</h2>
+          <p>Akshat Ayurvedic & Multi-Specialty Hospital was founded with a clear mission: to bring world-class healthcare to Gangapur City by combining the profound healing traditions of Ayurveda with evidence-based modern medicine.</p>
+          <p>Under the leadership of Vaidya J.P. Sharma, with 25 years of Ayurvedic expertise, our hospital has grown from a single-room clinic to a 20+ bed multi-specialty facility with a full diagnostic laboratory and rehabilitation centre.</p>
+        </div>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-box">🌿</div>
+        <div>
+          <h2>The Akshat Approach</h2>
+          <p>We believe healing is most effective when it treats the root cause, not just the symptom. Our "Ayurveda First" philosophy means we begin every patient journey with a thorough constitutional assessment before recommending treatment.</p>
+          <p>Our team of qualified specialists — from Ayurvedic vaidyas to MD physicians, dermatologists to physiotherapists — collaborate on every complex case to provide truly integrated care.</p>
+        </div>
+      </div>
+      <div class="sec-head center" style="margin-top:60px">
+        <div class="sec-label">Our Core Values</div>
+        <div class="sec-title">What We <span class="i">Stand For</span></div>
+      </div>
+      <div class="value-grid">
+        <div class="value-card"><div class="value-icon">❤️</div><div class="value-title">Compassion</div><div class="value-desc">Every patient is treated with dignity, empathy and genuine care — as family.</div></div>
+        <div class="value-card"><div class="value-icon">🔬</div><div class="value-title">Evidence-Based</div><div class="value-desc">Treatments grounded in both classical Ayurvedic texts and modern clinical evidence.</div></div>
+        <div class="value-card"><div class="value-icon">🌿</div><div class="value-title">Holistic Healing</div><div class="value-desc">Mind, body and spirit — addressing the complete person, not just a disease.</div></div>
+        <div class="value-card"><div class="value-icon">💰</div><div class="value-title">Affordability</div><div class="value-desc">Quality healthcare should be accessible to all, with transparent and fair pricing.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ════════════════════ CONTACT PAGE ════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="contact-hero">
+    <div class="sec-label" style="color:var(--gold2)">Get In Touch</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;font-weight:700;margin-bottom:16px">Find Us & <em style="font-style:italic;color:var(--gold2)">Contact</em></h1>
+    <p style="color:rgba(255,255,255,.65);max-width:540px;margin:0 auto;line-height:1.8">We are always here for you. Walk in, call us, or fill the form to book an appointment.</p>
+  </div>
+  <section class="contact-body">
+    <div class="max">
+      <div class="contact-grid">
+        <div>
+          <div class="contact-info-item">
+            <div class="ci-icon">📍</div>
+            <div><div class="ci-label">Address</div><div class="ci-val">Opp. Ashirwad Marriage Home,<br>College Road, Gangapur City,<br>Rajasthan – 322201</div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon">📞</div>
+            <div><div class="ci-label">Phone Numbers</div><div class="ci-val"><a href="tel:8432127462">8432127462</a><br><a href="tel:07463469884">07463-469884</a></div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon">🕐</div>
+            <div><div class="ci-label">Availability</div><div class="ci-val">Always Open — 24 × 7<br><span style="color:var(--g2);font-size:.88rem">Emergency Services Never Stop</span></div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon">🏥</div>
+            <div><div class="ci-label">Hospital Features</div><div class="ci-val" style="font-size:.88rem;font-weight:400;color:var(--mid)">20+ Beds · ICU · Emergency Ward · Full Lab · Pharmacy · Rehab Centre · Panchkarma Theatre</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="map-box">
+            <div class="map-icon">🗺️</div>
+            <h3>Akshat Ayurvedic Hospital</h3>
+            <p>Opp. Ashirwad Marriage Home<br>College Road, Gangapur City<br>Rajasthan – 322201, India</p>
+            <a class="map-link" href="https://maps.google.com?q=Akshat+Ayurvedic+Hospital+Gangapur+City" target="_blank">📍 Open in Google Maps</a>
+          </div>
+          <div class="form-card" style="margin-top:24px;box-shadow:0 4px 24px rgba(0,0,0,.06)">
+            <div class="form-title">Book an Appointment</div>
+            <div class="form-row"><label>Full Name</label><input type="text" placeholder="Your full name"></div>
+            <div class="form-grid-2">
+              <div class="form-row"><label>Phone</label><input type="tel" placeholder="Phone number"></div>
+              <div class="form-row"><label>Age</label><input type="number" placeholder="Age"></div>
+            </div>
+            <div class="form-row"><label>Service Required</label>
+              <select>
+                <option>General OPD Consultation</option>
+                <option>Panchkarma Therapy</option>
+                <option>Physiotherapy Session</option>
+                <option>Skin & Dermatology</option>
+                <option>Lab Tests</option>
+                <option>Paralysis Treatment</option>
+                <option>Emergency</option>
+              </select>
+            </div>
+            <div class="form-row"><label>Message</label><textarea placeholder="Describe your health concern..."></textarea></div>
+            <button class="submit-btn" onclick="alert('Thank you! We will call you within 30 minutes to confirm your appointment.')">📅 Confirm Appointment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="max">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text">🌿 Akshat Ayurvedic Hospital</div>
+        <p>Combining Ayurvedic tradition with modern multi-specialty medicine. Gangapur City's most trusted healthcare destination, always open.</p>
+        <div class="footer-phones">
+          <a href="tel:8432127462" class="footer-phone">📞 8432127462</a>
+          <a href="tel:07463469884" class="footer-phone">📞 07463-469884</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('services')">General Medicine</a></li>
+          <li><a href="#" onclick="showPage('services')">Panchkarma Therapy</a></li>
+          <li><a href="#" onclick="showPage('services')">Physiotherapy</a></li>
+          <li><a href="#" onclick="showPage('services')">Skin & Dermatology</a></li>
+          <li><a href="#" onclick="showPage('services')">Paralysis Treatment</a></li>
+          <li><a href="#" onclick="showPage('lab')">Lab & Diagnostics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('doctors')">Our Doctors</a></li>
+          <li><a href="#" onclick="showPage('blog')">Health Blog</a></li>
+          <li><a href="#" onclick="showPage('about')">About Us</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact & Map</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul>
+          <li><a href="#">Opp. Ashirwad Marriage Home</a></li>
+          <li><a href="#">College Road</a></li>
+          <li><a href="#">Gangapur City, Raj. 322201</a></li>
+        </ul>
+        <div class="footer-badge" style="margin-top:16px">Always Open · 24×7</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Akshat Ayurvedic & Multi-Specialty Hospital, Gangapur City. All rights reserved.</p>
+      <p>Designed with care for our patients.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── PAGE ROUTING ──
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById('page-' + name);
+  if (el) { el.classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+}
+function setActive(el) {
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  el.classList.add('active');
+  return false;
+}
+
+// ── MOBILE MENU ──
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ── QR CHIP SELECT ──
+document.querySelectorAll('.qb-chip').forEach(c => {
+  c.addEventListener('click', () => {
+    document.querySelectorAll('.qb-chip').forEach(x => x.classList.remove('sel'));
+    c.classList.add('sel');
+  });
+});
+
+// ── CAROUSEL ──
+let carIdx = 0;
+const track = document.getElementById('revTrack');
+const cards = track ? track.querySelectorAll('.rev-card') : [];
+const totalSlides = cards.length;
+let slidesPerView = window.innerWidth < 768 ? 1 : 2;
+
+function buildDots() {
+  const container = document.getElementById('carDots');
+  if (!container) return;
+  container.innerHTML = '';
+  const numDots = Math.ceil(totalSlides / slidesPerView);
+  for (let i = 0; i < numDots; i++) {
+    const d = document.createElement('div');
+    d.className = 'c-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    container.appendChild(d);
+  }
+}
+
+function goTo(idx) {
+  const numDots = Math.ceil(totalSlides / slidesPerView);
+  carIdx = Math.max(0, Math.min(idx, numDots - 1));
+  if (!track) return;
+  const cardW = track.querySelector('.rev-card')?.offsetWidth + 20 || 0;
+  track.style.transform = `translateX(-${carIdx * slidesPerView * cardW}px)`;
+  document.querySelectorAll('.c-dot').forEach((d,i) => d.classList.toggle('active', i === carIdx));
+}
+
+function moveCarousel(dir) { goTo(carIdx + dir); }
+
+window.addEventListener('resize', () => {
+  slidesPerView = window.innerWidth < 768 ? 1 : 2;
+  buildDots(); goTo(0);
+});
+
+buildDots();
+
+// Auto-play
+setInterval(() => {
+  const numDots = Math.ceil(totalSlides / slidesPerView);
+  goTo((carIdx + 1) % numDots);
+}, 5000);
+
+// ── BLOG DETAILS ──
+const blogPosts = {
+  'ayurveda-digestion': {
+    cat: 'Ayurveda',
+    title: '5 Daily Habits for Healthy Digestion According to Ayurveda',
+    author: 'Vaidya J.P. Sharma, BAMS',
+    date: 'March 2024',
+    icon: '🌿',
+    content: `
+      <h2>The Ayurvedic View of Digestion</h2>
+      <p>In Ayurveda, strong digestion — known as "Agni" — is considered the foundation of all health. When your digestive fire burns well, nutrients are absorbed efficiently, toxins (Ama) don't accumulate, and disease is prevented at the source.</p>
+      <h2>1. Start Your Day With Warm Water</h2>
+      <p>Drinking 1-2 glasses of warm (not hot) water immediately upon waking activates the digestive system, flushes overnight toxins, and prepares the gut for the day ahead. Add a squeeze of lemon for enhanced detoxifying effect.</p>
+      <h2>2. Eat Your Largest Meal at Midday</h2>
+      <p>Ayurveda aligns eating times with the sun's cycle. Digestive capacity (Agni) peaks at noon when the sun is at its highest. Make lunch your main meal. Eat a light dinner at least 3 hours before sleeping.</p>
+      <h2>3. Avoid Ice-Cold Drinks and Food</h2>
+      <p>Cold beverages and food "douse" the digestive fire according to Ayurvedic theory — a concept now supported by research showing cold impairs gastric enzyme activity. Prefer room temperature or warm beverages, especially during meals.</p>
+      <h2>4. Practice Mindful Eating</h2>
+      <p>Sit while eating. Eat without distractions. Chew each bite 20-30 times. The digestive process begins in the mouth — thorough chewing significantly improves nutrient absorption and reduces bloating.</p>
+      <h2>5. Use Digestive Spices Daily</h2>
+      <p>Ginger, cumin, coriander, fennel and turmeric are powerful digestive aids. Add them generously to cooking. Fennel seeds after meals help reduce gas and bloating effectively.</p>
+      <ul>
+        <li>Ginger — stimulates digestive enzymes</li>
+        <li>Cumin — reduces gas and bloating</li>
+        <li>Turmeric — anti-inflammatory gut support</li>
+        <li>Fennel — carminative, reduces discomfort after meals</li>
+      </ul>
+      <h2>When to Seek Expert Help</h2>
+      <p>If digestive issues persist despite these lifestyle changes, or if you experience symptoms like blood in stool, unexplained weight loss, or severe abdominal pain, please visit Akshat Hospital immediately for evaluation. Call us at 8432127462.</p>
+    `
+  },
+  'back-pain': {
+    cat: 'Physiotherapy',
+    title: "Don't Ignore Back Pain: When to See a Physiotherapist",
+    author: 'Dr. Gaurav Sharma, Physiotherapist',
+    date: 'February 2024',
+    icon: '🤸',
+    content: `
+      <h2>How Common is Back Pain?</h2>
+      <p>Back pain is one of the leading causes of disability worldwide, affecting up to 80% of adults at some point in their lives. Yet many people either ignore it or self-medicate, allowing a manageable condition to become chronic.</p>
+      <h2>Warning Signs That Need Immediate Attention</h2>
+      <ul>
+        <li>Pain that radiates down one or both legs (sciatica)</li>
+        <li>Numbness or tingling in legs or feet</li>
+        <li>Weakness in the legs</li>
+        <li>Pain that wakes you from sleep</li>
+        <li>Back pain with fever or unexplained weight loss</li>
+        <li>Loss of bladder or bowel control</li>
+      </ul>
+      <h2>The Role of Physiotherapy</h2>
+      <p>Physiotherapy is the gold standard treatment for most mechanical back pain. A qualified physiotherapist identifies the specific cause — muscle imbalance, disc problem, poor posture, joint dysfunction — and creates a targeted rehabilitation program.</p>
+      <h2>Our Physiotherapy Approach at Akshat Hospital</h2>
+      <p>Dr. Gaurav Sharma provides comprehensive physiotherapy from 7:30 AM to 2:00 PM and 5:00 PM to 9:00 PM — one of the most accessible physiotherapy schedules in Gangapur City. Treatment includes manual therapy, therapeutic exercises, electrotherapy, and postural correction.</p>
+      <h2>Prevention is Better Than Cure</h2>
+      <p>Regular core strengthening exercises, ergonomic workstation setup, maintaining healthy weight, and avoiding prolonged sitting are the most effective preventive measures for back pain.</p>
+    `
+  },
+  'psoriasis': {
+    cat: 'Skin Health',
+    title: 'Understanding Psoriasis: Causes, Triggers & Effective Treatments',
+    author: 'Dr. K.K. Vaishnav, MD Dermatology',
+    date: 'January 2024',
+    icon: '☀️',
+    content: `
+      <h2>What is Psoriasis?</h2>
+      <p>Psoriasis is a chronic autoimmune skin condition that speeds up the life cycle of skin cells. This causes cells to build up rapidly on the surface of the skin, forming scales and red patches that can be itchy and sometimes painful.</p>
+      <h2>Common Triggers</h2>
+      <ul>
+        <li>Stress — one of the most common and significant triggers</li>
+        <li>Certain medications (lithium, beta-blockers, antimalarials)</li>
+        <li>Infections, particularly streptococcal throat infections</li>
+        <li>Injury to skin — cuts, burns, insect bites</li>
+        <li>Smoking and heavy alcohol consumption</li>
+        <li>Extreme cold weather and low humidity</li>
+      </ul>
+      <h2>Modern Dermatological Treatments</h2>
+      <p>Current treatments include topical corticosteroids, vitamin D analogues, retinoids, and for severe cases, systemic medications and biologics. The goal is to reduce inflammation and slow skin cell turnover.</p>
+      <h2>Ayurvedic Perspective and Integrated Approach</h2>
+      <p>In Ayurveda, psoriasis is classified under "Kushtha Roga" and is associated with Vata-Kapha imbalance. Panchkarma therapies — particularly Vamana and Virechana — combined with Takradhara (medicated buttermilk treatment) have shown significant results in managing psoriasis.</p>
+      <p>At Akshat Hospital, we combine modern dermatological treatments with traditional Ayurvedic protocols under Dr. K.K. Vaishnav's supervision for comprehensive psoriasis management.</p>
+      <h2>Consultation Hours</h2>
+      <p>Dr. Vaishnav is available Monday to Saturday, 10:00 AM to 2:00 PM. Call 8432127462 to book a consultation.</p>
+    `
+  },
+  'dengue': {
+    cat: 'General Health',
+    title: 'Dengue: Symptoms, Warning Signs & When to Rush to Hospital',
+    author: 'Dr. R.M. Meena, MBBS MD',
+    date: 'December 2023',
+    icon: '🩺',
+    content: `
+      <h2>What is Dengue Fever?</h2>
+      <p>Dengue fever is a mosquito-borne viral infection transmitted by the Aedes aegypti mosquito. It is prevalent in tropical and subtropical regions, including Rajasthan, particularly during and after the monsoon season.</p>
+      <h2>Classic Symptoms (Days 1–3)</h2>
+      <ul>
+        <li>Sudden high fever (39–40°C / 102–104°F)</li>
+        <li>Severe headache, especially behind the eyes</li>
+        <li>Joint and muscle pain ("breakbone fever")</li>
+        <li>Skin rash appearing 2–5 days after fever onset</li>
+        <li>Mild bleeding from gums or nose</li>
+      </ul>
+      <h2>Warning Signs — Come to Hospital Immediately</h2>
+      <ul>
+        <li>Severe abdominal pain or tenderness</li>
+        <li>Persistent vomiting (3+ times in 24 hours)</li>
+        <li>Bleeding from gums, nose, or in vomit/stool</li>
+        <li>Rapid breathing, fatigue, restlessness</li>
+        <li>Blood in urine (dark or tea-coloured urine)</li>
+        <li>Pale, cold, clammy skin</li>
+      </ul>
+      <h2>Diagnosis at Akshat Hospital</h2>
+      <p>Our in-house lab provides rapid NS1 antigen tests for early dengue detection and complete blood counts (CBC) for monitoring platelet levels — both available with same-day results.</p>
+      <h2>Treatment and Prevention</h2>
+      <p>There is no specific antiviral treatment for dengue. Management focuses on hydration, rest, and monitoring for complications. Aspirin and ibuprofen should be strictly avoided. Paracetamol is safe for fever control. Eliminate standing water around your home to reduce mosquito breeding.</p>
+    `
+  },
+  'janu-basti': {
+    cat: 'Ayurveda',
+    title: 'Janu Basti Therapy: The Ayurvedic Solution for Knee Pain',
+    author: 'Vaidya J.P. Sharma, BAMS',
+    date: 'November 2023',
+    icon: '🦵',
+    content: `
+      <h2>What is Janu Basti?</h2>
+      <p>Janu Basti is a specialised Ayurvedic treatment where warm medicated oil is retained over the knee joint within a dough ring (made from black gram flour). "Janu" means knee and "Basti" means to hold or contain.</p>
+      <h2>Conditions Treated Effectively</h2>
+      <ul>
+        <li>Osteoarthritis of the knee</li>
+        <li>Chronic knee pain and stiffness</li>
+        <li>Cartilage degeneration</li>
+        <li>Ligament and meniscus injuries</li>
+        <li>Post-surgical knee rehabilitation</li>
+        <li>Vata-dominant joint disorders</li>
+      </ul>
+      <h2>The Procedure</h2>
+      <p>The patient lies comfortably while a dough ring is fixed around the knee. Warm medicated oil — typically Mahanarayan tail or Ksheerabala — is carefully poured and maintained at a specific temperature for 30–45 minutes. The oil is periodically reheated and recirculated to maintain temperature.</p>
+      <h2>Duration and Results</h2>
+      <p>A typical course consists of 7–14 sessions conducted daily or on alternate days. Most patients report significant reduction in pain and improved mobility after the first 5 sessions. Complete courses typically eliminate chronic pain in 80% of cases without any side effects.</p>
+      <h2>Why Choose Ayurveda Over Surgery?</h2>
+      <p>Many patients facing knee replacement surgery have successfully avoided it through regular Janu Basti therapy combined with Ayurvedic oral medications and lifestyle modifications. It is always worth exploring conservative Ayurvedic options before considering surgery.</p>
+    `
+  },
+  'stroke-rehab': {
+    cat: 'Physiotherapy',
+    title: 'Post-Stroke Rehabilitation: The Critical First 90 Days',
+    author: 'Dr. Gaurav Sharma, Physiotherapist',
+    date: 'October 2023',
+    icon: '🌡️',
+    content: `
+      <h2>Why the First 90 Days Matter Most</h2>
+      <p>The brain has remarkable plasticity — particularly in the acute phase after stroke. The first 90 days represent a critical window where intensive, structured rehabilitation can dramatically improve recovery outcomes. Research shows that early rehabilitation significantly improves both the speed and extent of neurological recovery.</p>
+      <h2>What to Expect in the First Week</h2>
+      <p>Physiotherapy should begin within 24–48 hours of stroke stabilisation, focusing on passive range-of-motion exercises, positioning, and preventing complications like pressure sores, contractures, and deep vein thrombosis.</p>
+      <h2>Weeks 2–6: Active Recovery</h2>
+      <ul>
+        <li>Standing and weight-bearing training</li>
+        <li>Gait re-education and walking practice</li>
+        <li>Upper limb functional rehabilitation</li>
+        <li>Balance and coordination training</li>
+        <li>Activities of daily living (ADL) training</li>
+      </ul>
+      <h2>Months 2–3: Functional Independence</h2>
+      <p>The goal of this phase is maximising functional independence. This includes advanced gait training, stair climbing, community mobility, and return to meaningful activities. Family education is essential during this phase.</p>
+      <h2>Our Paralysis Rehabilitation Programme</h2>
+      <p>Dr. Gaurav Sharma provides structured stroke rehabilitation at Akshat Hospital. Our programme combines physiotherapy with Ayurvedic treatments (Panchkarma) for comprehensive neurological recovery. Sessions available 7:30 AM – 2:00 PM and 5:00 PM – 9:00 PM daily.</p>
+    `
+  }
+};
+
+function showBlogDetail(slug) {
+  const post = blogPosts[slug];
+  if (!post) return;
+  document.getElementById('blogDetailContent').innerHTML = `
+    <div class="blog-detail-cat">${post.cat}</div>
+    <h1>${post.title}</h1>
+    <div class="blog-detail-meta">
+      <span>By ${post.author}</span>
+      <span>·</span>
+      <span>${post.date}</span>
+    </div>
+    <div class="blog-detail-img">${post.icon}</div>
+    <div class="blog-content">${post.content}</div>
+    <div style="margin-top:40px;padding:24px;background:var(--cream);border-radius:16px;border:1px solid var(--border)">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--g1);margin-bottom:8px">Have questions? Talk to our doctors.</div>
+      <p style="color:var(--mid);font-size:.9rem;margin-bottom:14px">Call us for a consultation or walk in — we are always open.</p>
+      <a href="tel:8432127462" class="btn-fill" style="display:inline-flex">📞 Call: 8432127462</a>
+    </div>
+  `;
+  showPage('blog-detail');
+}
+</script>
+</body>
+</html>
