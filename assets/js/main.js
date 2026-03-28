@@ -1,4 +1,4 @@
-﻿// PAGE ROUTING
+// PAGE ROUTING
 function showPage(name) {
   document.querySelectorAll('.page').forEach((p) => p.classList.remove('active'));
   const el = document.getElementById('page-' + name);
@@ -16,19 +16,35 @@ function setActive(el) {
 }
 
 // MOBILE MENU
-function toggleMenu() {
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (mobileMenu) mobileMenu.classList.toggle('open');
+const mobHam = document.getElementById('mob-ham');
+const mobOverlay = document.getElementById('mob-overlay');
+const mobMenu = document.getElementById('mob-menu');
+const mobMenuX = document.getElementById('mob-menu-x');
+const mobMenuClose = document.getElementById('mob-menu-close');
+
+function openMobileMenu() {
+  if (mobOverlay) mobOverlay.classList.add('is-open');
+  if (mobMenu) mobMenu.classList.add('is-open');
 }
+
+function closeMobileMenu() {
+  if (mobOverlay) mobOverlay.classList.remove('is-open');
+  if (mobMenu) mobMenu.classList.remove('is-open');
+}
+
+if (mobHam) mobHam.addEventListener('click', openMobileMenu);
+if (mobMenuX) mobMenuX.addEventListener('click', closeMobileMenu);
+if (mobMenuClose) mobMenuClose.addEventListener('click', closeMobileMenu);
+if (mobOverlay) mobOverlay.addEventListener('click', closeMobileMenu);
 
 // NAV SCROLL STATE
 function updateNavState() {
-  const nav = document.querySelector('nav');
+  const nav = document.getElementById('site-header');
   const homePage = document.getElementById('page-home');
   if (!nav || !homePage) return;
   const isHomeActive = homePage.classList.contains('active');
   const shouldSolid = window.scrollY > 24 || !isHomeActive;
-  nav.classList.toggle('nav-scrolled', shouldSolid);
+  nav.classList.toggle('scrolled', shouldSolid);
 }
 
 window.addEventListener('scroll', updateNavState);

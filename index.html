@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,57 +17,86 @@
 </head>
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar">
-  <span>🌿 Akshat Ayurvedic & Multi-Specialty Hospital, Gangapur City</span>
-  <div class="topbar-right">
-    <span>Always Open · 24×7 Emergency</span>
-    <a href="tel:8432127462">📞 8432127462</a>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="max">
+    <div class="top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item"><span>🌿 Akshat Ayurvedic & Multi-Specialty Hospital, Gangapur City</span></div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item"><span>Always Open · 24×7 Emergency</span></div>
+        <div class="top-bar-item"><a href="tel:8432127462">📞 8432127462</a></div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a class="logo" href="#" onclick="showPage('home')">
-      <div class="logo-mark">🌿</div>
-      <div class="logo-text">Akshat Ayurvedic
-        <small>Multi-Specialty Hospital</small>
+<!-- NAVBAR -->
+<header class="site-header" id="site-header">
+  <div class="max">
+    <div class="nav-inner">
+      <a href="#" class="site-logo" onclick="showPage('home')">
+        <div class="logo-icon">🌿</div>
+        <div class="logo-text">
+          <span class="logo-name">Akshat</span>
+          <span class="logo-sub">Ayurvedic Hospital</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#" class="active" onclick="showPage('home');setActive(this)">Home</a></li>
+        <li><a href="#" role="button" onclick="showPage('services');setActive(this)">Services</a></li>
+        <li><a href="#" role="button" onclick="showPage('doctors');setActive(this)">Doctors</a></li>
+        <li><a href="#" role="button" onclick="showPage('lab');setActive(this)">Lab & Tests</a></li>
+        <li><a href="#" role="button" onclick="showPage('blog');setActive(this)">Health Blog</a></li>
+        <li><a href="#" role="button" onclick="showPage('about');setActive(this)">About Us</a></li>
+        <li><a href="#" role="button" onclick="showPage('contact');setActive(this)">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:8432127462" class="btn-ghost">📞 Call Us</a>
+        <a href="#" class="btn-fill" onclick="showPage('contact')">Book Appointment →</a>
       </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#" class="active" onclick="showPage('home');setActive(this)">Home</a></li>
-      <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('services');setActive(this)">Services</a></li>
-      <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('doctors');setActive(this)">Doctors</a></li>
-      <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('lab');setActive(this)">Lab & Tests</a></li>
-      <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('blog');setActive(this)">Health Blog</a></li>
-      <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('about');setActive(this)">About Us</a></li>
-      <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('contact');setActive(this)">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a href="tel:8432127462" class="btn-ghost">📞 Call Us</a>
-      <a href="#" class="btn-fill" onclick="showPage('contact')">Book Appointment →</a>
-    </div>
-    <div class="hamburger" role="button" onkeydown="this.click()" aria-label="Toggle menu" tabindex="0" onclick="toggleMenu()" onkeydown="if(event.key==='Enter'||event.key===' ')toggleMenu()">
-      <span></span><span></span><span></span>
+      <button class="hamburger" id="mob-ham" aria-label="Open mobile menu" aria-controls="mob-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
-</nav>
+</header>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <ul>
-    <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('home');toggleMenu()">🏠 Home</a></li>
-    <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('services');toggleMenu()">🩺 Services</a></li>
-    <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('doctors');toggleMenu()">👨‍⚕️ Doctors</a></li>
-    <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('lab');toggleMenu()">🔬 Lab & Tests</a></li>
-    <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('blog');toggleMenu()">📰 Health Blog</a></li>
-    <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('about');toggleMenu()">🏥 About Us</a></li>
-    <li><a href="#" role="button" onkeydown="this.click()" onclick="showPage('contact');toggleMenu()">📍 Contact</a></li>
-  </ul>
-  <div class="mobile-cta">
-    <a href="tel:8432127462" class="btn-fill" style="justify-content:center">📞 Call: 8432127462</a>
-    <a href="tel:07463469884" class="btn-ghost" style="text-align:center">📞 07463-469884</a>
+<!-- MOBILE MENU OVERLAY -->
+<div class="mob-overlay" id="mob-overlay" aria-hidden="true"></div>
+
+<!-- MOBILE MENU CARD -->
+<div class="mob-menu" id="mob-menu" role="dialog" aria-modal="true" aria-label="Navigation Menu" aria-hidden="true">
+  <div class="mob-menu-top">
+    <a href="#" class="mob-menu-logo" onclick="showPage('home');closeMobileMenu()">
+      <span class="mob-menu-logo-name">Akshat Ayurvedic</span>
+      <span class="mob-menu-logo-tag">Multi-Specialty Hospital</span>
+    </a>
+    <button class="mob-menu-x" id="mob-menu-x" aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="mob-menu-actions">
+    <a href="tel:8432127462" class="mob-action-btn mob-action-call">📞 Call Now</a>
+    <a href="tel:07463469884" class="mob-action-btn mob-action-wa">📞 07463-469884</a>
+  </div>
+
+  <div class="mob-menu-divider"></div>
+
+  <nav class="mob-nav">
+    <ul class="mob-nav-list">
+      <li class="mob-nav-item"><a href="#" class="mob-nav-link" onclick="showPage('home');closeMobileMenu()">🏠 Home</a></li>
+      <li class="mob-nav-item"><a href="#" class="mob-nav-link" onclick="showPage('services');closeMobileMenu()">🩺 Services</a></li>
+      <li class="mob-nav-item"><a href="#" class="mob-nav-link" onclick="showPage('doctors');closeMobileMenu()">👨‍⚕️ Doctors</a></li>
+      <li class="mob-nav-item"><a href="#" class="mob-nav-link" onclick="showPage('lab');closeMobileMenu()">🔬 Lab & Tests</a></li>
+      <li class="mob-nav-item"><a href="#" class="mob-nav-link" onclick="showPage('blog');closeMobileMenu()">📰 Health Blog</a></li>
+      <li class="mob-nav-item"><a href="#" class="mob-nav-link" onclick="showPage('about');closeMobileMenu()">🏥 About Us</a></li>
+      <li class="mob-nav-item"><a href="#" class="mob-nav-link" onclick="showPage('contact');closeMobileMenu()">📍 Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="mob-menu-footer">
+    <button class="mob-menu-close-btn" id="mob-menu-close">✕ Close Menu</button>
   </div>
 </div>
 
