@@ -61,7 +61,7 @@ nav:not(.nav-scrolled) .hamburger span{background:#fff}
 .hero-glow{position:absolute;right:-100px;top:50%;transform:translateY(-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(76,175,128,.18),transparent 70%);pointer-events:none}
 .hero-inner{max-width:1260px;margin:0 auto;padding:80px 6%;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;position:relative;z-index:2;width:100%}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(200,153,58,.15);border:1px solid rgba(200,153,58,.35);color:var(--gold2);font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:28px}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);color:#fff;font-weight:700;line-height:1.1;margin-bottom:12px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,8vw,4rem);color:#fff;font-weight:700;line-height:1.1;margin-bottom:12px;word-break:break-word}
 .hero h1 .accent{color:var(--gold2);font-style:italic}
 .hero-sub{color:rgba(255,255,255,.55);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;margin-bottom:20px}
 .hero-desc{color:rgba(255,255,255,.7);font-size:1rem;line-height:1.8;margin-bottom:36px;max-width:500px}
@@ -327,9 +327,10 @@ footer{background:var(--dark);padding:60px 6% 28px}
 
 /* ─── MOBILE NAV ─── */
 .hero.hero-slider{min-height:auto;padding:84px 6% 62px;background:linear-gradient(130deg,#12331f 0%,#1a5c3a 60%,#234e35 100%)}
-.hero-slider-wrap{max-width:1260px;margin:0 auto}
+.hero-slider-wrap{width:100%;max-width:1260px;margin:0 auto}
 .hero-slide-stage{position:relative;min-height:440px;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.02)}
 .hero-slide{position:absolute;inset:0;display:grid;grid-template-columns:1fr 240px;gap:24px;align-items:center;padding:44px 50px;opacity:0;pointer-events:none;transition:opacity .6s ease}
+.hero-slide > div{min-width:0}
 .hero-slide:nth-child(1){background:linear-gradient(135deg,#1a5c3a,#214a32)}
 .hero-slide:nth-child(2){background:linear-gradient(135deg,#253e24,#3a5927)}
 .hero-slide:nth-child(3){background:linear-gradient(135deg,#1d4041,#1a5f50)}
