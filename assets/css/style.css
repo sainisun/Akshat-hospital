@@ -485,6 +485,32 @@ footer{background:var(--dark);padding:60px 0 28px}
 .footer-social:hover{background:var(--gold2);color:var(--dark)}
 
 
+/* ─── ANIMATIONS & EFFECTS ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+.hero-bg-pattern {
+  animation: slowZoom 20s ease-in-out infinite;
+  transform-origin: center;
+  transition: opacity 1s;
+}
+
 /* ─── RESPONSIVE ─── */
 @media(max-width:1024px){
   .hero-inner{grid-template-columns:1fr;gap:40px}

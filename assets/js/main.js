@@ -448,4 +448,47 @@ function showBlogDetail(slug) {
   showPage('blog-detail');
 }
 
+// SCROLL REVEAL ANIMATION
+document.addEventListener("DOMContentLoaded", function() {
+  const elementsToReveal = document.querySelectorAll(`
+    .sec-head, 
+    .serv-card, 
+    .why-card, 
+    .home-doctor-card, 
+    .ayurveda-layout > div, 
+    .ayurveda-rating-card,
+    .quick-item,
+    .blog-card,
+    .about-grid > div,
+    .value-card,
+    .contact-info-item,
+    .map-box,
+    .form-card
+  `);
+  
+  elementsToReveal.forEach((el, index) => {
+    el.classList.add('reveal');
+    if (el.classList.contains('serv-card') || el.classList.contains('why-card') || el.classList.contains('quick-item') || el.classList.contains('home-doctor-card') || el.classList.contains('value-card') || el.classList.contains('blog-card')) {
+      const delay = (index % 4) + 1;
+      el.classList.add('reveal-delay-' + delay);
+    }
+  });
 
+  const revealOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+  
+  const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, revealOptions);
+  
+  document.querySelectorAll(".reveal").forEach(reveal => {
+    revealOnScroll.observe(reveal);
+  });
+});
